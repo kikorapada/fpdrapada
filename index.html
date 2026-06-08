@@ -1,474 +1,3712 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francis.dev | Building Secure Enterprise Web Systems That Scale</title>
+<meta name="description" content="Full Stack Developer specializing in Laravel, Power BI Dashboards, UI/UX Design, Business Automation, and Secure Architectures. Philippines.">
 
-<title>Francis Rapada | Full Stack Developer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-<meta name="description"
-content="Full Stack Developer specializing in Laravel, APIs, dashboards, and enterprise systems.">
+<style>
+/* ============================================================
+   FRANCIS.DEV — ENTERPRISE PORTFOLIO
+   Dark SaaS · Glassmorphism · Blue/Purple accent
+   Bootstrap 5 · jQuery · Production-ready
+   ============================================================ */
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+/* ── CSS VARIABLES — DARK (default) ────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:          #060c1c;
+  --bg2:         #0b1428;
+  --bg3:         #0f1e3a;
+  --card:        rgba(11,20,40,.82);
+  --card-hover:  rgba(11,20,40,.95);
+  /* Borders */
+  --border:      rgba(255,255,255,.07);
+  --border2:     rgba(255,255,255,.14);
+  --border-blue: rgba(27,61,139,.4);
+  /* ── SMARTWASH EXACT BRAND COLORS ── */
+  --blue:        #1B3D8B;   /* SmartWash Royal Blue  */
+  --blue-d:      #142D68;   /* Darker shade           */
+  --blue-l:      #2451A8;   /* Lighter shade          */
+  --blue-g:      rgba(27,61,139,.4);
+  --yellow:      #F5C400;   /* SmartWash Bright Yellow */
+  --yellow-d:    #D4A900;
+  --yellow-l:    #FFD700;
+  --yellow-g:    rgba(245,196,0,.35);
+  --purple:      #F5C400;   /* alias → yellow */
+  --purple-l:    #FFD700;
+  --purple-g:    rgba(245,196,0,.3);
+  --neon:        #10b981;
+  --neon-g:      rgba(16,185,129,.3);
+  /* Text */
+  --text:        #eef4ff;
+  --text2:       #d0dcf5;
+  --muted:       #7a93c4;
+  --muted2:      #a4bde0;
+  /* ── SOLID — no gradient ── */
+  --grad:        #1B3D8B;
+  --grad-t:      #F5C400;
+  --grad-blue:   #1B3D8B;
+  --grad-warm:   #F5C400;
+  /* Shadows */
+  --shadow-sm:   0 2px 8px rgba(0,0,0,.4);
+  --shadow-md:   0 8px 28px rgba(0,0,0,.5);
+  --shadow-lg:   0 20px 60px rgba(0,0,0,.6);
+  --glow-blue:   0 0 30px rgba(27,61,139,.45);
+  --glow-yellow: 0 0 24px rgba(245,196,0,.3);
+  /* Navbar */
+  --nav-blur-bg: rgba(6,12,28,.9);
+  /* Grid */
+  --grid-line:   rgba(255,255,255,.025);
+  --noise-op:    .025;
+  --r-xl:        18px;
+  --r-2xl:       26px;
+  --t-theme:     background .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* ── CSS VARIABLES — LIGHT ──────────────────────────────────── */
+[data-theme="light"] {
+  --bg:          #EEF2FF;
+  --bg2:         #FFFFFF;
+  --bg3:         #DDE6FF;
+  --card:        rgba(255,255,255,.92);
+  --card-hover:  rgba(255,255,255,.99);
+  --border:      rgba(27,61,139,.08);
+  --border2:     rgba(27,61,139,.16);
+  --border-blue: rgba(27,61,139,.3);
+  --blue:        #1B3D8B;
+  --blue-d:      #142D68;
+  --blue-l:      #2451A8;
+  --blue-g:      rgba(27,61,139,.28);
+  --yellow:      #C49900;
+  --yellow-d:    #A07D00;
+  --yellow-l:    #F5C400;
+  --yellow-g:    rgba(196,153,0,.28);
+  --purple:      #C49900;
+  --purple-l:    #F5C400;
+  --purple-g:    rgba(196,153,0,.22);
+  --neon:        #059669;
+  --neon-g:      rgba(5,150,105,.25);
+  --text:        #080F2A;
+  --text2:       #0F1E50;
+  --muted:       #4A5E8A;
+  --muted2:      #1B3060;
+  --grad:        #1B3D8B;
+  --grad-t:      #C49900;
+  --grad-blue:   #1B3D8B;
+  --grad-warm:   #C49900;
+  --shadow-sm:   0 2px 8px rgba(27,61,139,.1);
+  --shadow-md:   0 8px 28px rgba(27,61,139,.14);
+  --shadow-lg:   0 20px 60px rgba(27,61,139,.18);
+  --glow-blue:   0 0 30px rgba(27,61,139,.18);
+  --glow-yellow: 0 0 24px rgba(196,153,0,.18);
+  --nav-blur-bg: rgba(238,242,255,.93);
+  --grid-line:   rgba(27,61,139,.04);
+  --noise-op:    .016;
+}
 
-<link rel="stylesheet" href="css/styles.css">
+/* ── RESET ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html {
+  scroll-behavior:smooth;
+  scrollbar-width:thin;
+  scrollbar-color:var(--border2) transparent;
+  transition: var(--t-theme);
+}
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--border2); border-radius:3px; }
 
+body {
+  font-family:'Manrope', system-ui, sans-serif;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1500px 750px at 110% -8%, rgba(27,61,139,.14), transparent 55%),
+    radial-gradient(1000px 600px at -8% 42%, rgba(245,196,0,.07), transparent 55%),
+    radial-gradient(700px 500px at 50% 100%, rgba(27,61,139,.08), transparent 55%);
+  color: var(--text);
+  letter-spacing: -.01em;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.65;
+  transition: background-color .4s ease, color .3s ease;
+}
+
+[data-theme="light"] body,
+[data-theme="light"] {
+  background-image:
+    radial-gradient(1500px 750px at 110% -8%, rgba(27,61,139,.08), transparent 55%),
+    radial-gradient(1000px 600px at -8% 42%, rgba(245,196,0,.04), transparent 55%),
+    radial-gradient(700px 500px at 50% 100%, rgba(27,61,139,.05), transparent 55%);
+}
+
+/* ── PREMIUM NOISE TEXTURE ──────────────────────────────────── */
+body::after {
+  content:"";
+  position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: var(--noise-op);
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: overlay;
+  transition: opacity .4s ease;
+}
+
+/* Grid overlay */
+body::before {
+  content:"";
+  position:fixed; inset:0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 55% at 50% 15%, black 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity .4s ease;
+}
+
+/* ── THEME TRANSITION — all elements ───────────────────────── */
+*, *::before, *::after {
+  transition:
+    background-color .32s ease,
+    border-color .32s ease,
+    color .25s ease,
+    box-shadow .32s ease;
+}
+/* Don't transition transforms/animations */
+.h-orb, .wov-orb, .wov-ring, .hp, .npulse, .avail-dot,
+.pv-b, .skill-fill, .wov-progress-fill, .morph-cursor,
+.wov-wave, .float-pill, .wov-avatar, .ct-dot, .preview-card {
+  transition: none !important;
+}
+
+a { color:inherit; text-decoration:none; }
+button { font-family:inherit; cursor:pointer; border:none; }
+img { display:block; max-width:100%; }
+
+/* ══════════════════════════════════════════════
+   LIGHT MODE COMPONENT OVERRIDES
+   ══════════════════════════════════════════════ */
+
+/* Navbar */
+[data-theme="light"] .navbar-wrap.stuck {
+  background: rgba(240,245,255,.9);
+  border-bottom-color: rgba(15,23,80,.1);
+}
+[data-theme="light"] .mob-nav {
+  background: rgba(240,245,255,.97);
+}
+[data-theme="light"] .mob-nav a { color: var(--muted); }
+[data-theme="light"] .nav-menu a { color: var(--muted); }
+[data-theme="light"] .nav-menu a:hover { color: var(--blue); }
+
+/* Glass cards */
+[data-theme="light"] .glass,
+[data-theme="light"] .svc-card,
+[data-theme="light"] .why-row,
+[data-theme="light"] .proj-card,
+[data-theme="light"] .plan-card,
+[data-theme="light"] .testi-card,
+[data-theme="light"] .faq-item,
+[data-theme="light"] .ct-card,
+[data-theme="light"] .proc-box,
+[data-theme="light"] .pv-stat,
+[data-theme="light"] .wv-main,
+[data-theme="light"] .wvb-1,
+[data-theme="light"] .wvb-2 {
+  background: rgba(255,255,255,.88);
+  border-color: rgba(15,23,80,.09);
+  box-shadow: var(--shadow-sm);
+}
+[data-theme="light"] .glass:hover,
+[data-theme="light"] .svc-card:hover,
+[data-theme="light"] .proj-card:hover,
+[data-theme="light"] .plan-card:hover,
+[data-theme="light"] .testi-card:hover,
+[data-theme="light"] .why-row:hover {
+  border-color: rgba(37,99,235,.3);
+  box-shadow: var(--shadow-md);
+}
+
+/* Plan featured card */
+[data-theme="light"] .plan-card.hot {
+  background: rgba(255,255,255,.96);
+  border-color: rgba(37,99,235,.3);
+  box-shadow: 0 0 0 1px rgba(37,99,235,.1), var(--shadow-md);
+}
+
+/* Hero preview */
+[data-theme="light"] .preview-card {
+  background: rgba(255,255,255,.92);
+  border-color: rgba(15,23,80,.12);
+  box-shadow: var(--shadow-lg);
+}
+[data-theme="light"] .pv-bar { background: rgba(255,255,255,.96); border-bottom-color: rgba(15,23,80,.08); }
+[data-theme="light"] .pv-stat { background: rgba(15,23,80,.04); border-color: rgba(15,23,80,.08); }
+
+/* Float pills */
+[data-theme="light"] .float-pill {
+  background: rgba(255,255,255,.95);
+  border-color: rgba(15,23,80,.12);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tech chips */
+[data-theme="light"] .tc {
+  background: rgba(255,255,255,.8);
+  border-color: rgba(15,23,80,.1);
+  color: var(--muted2);
+}
+[data-theme="light"] .tc:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: rgba(255,255,255,.98);
+}
+
+/* Process */
+[data-theme="light"] .process-line::before { opacity:.2; }
+[data-theme="light"] .proc-num {
+  background: rgba(255,255,255,.95);
+  border-color: rgba(15,23,80,.15);
+}
+
+/* Career timeline */
+[data-theme="light"] .career-timeline::before { opacity:.2; }
+[data-theme="light"] .ct-dot {
+  background: rgba(255,255,255,.95);
+  border-color: rgba(15,23,80,.15);
+}
+
+/* Contact card */
+[data-theme="light"] .contact-card {
+  background: rgba(255,255,255,.82);
+  border-color: rgba(15,23,80,.09);
+}
+[data-theme="light"] .form-inp {
+  background: rgba(15,23,80,.04);
+  border-color: rgba(15,23,80,.12);
+  color: var(--text);
+}
+[data-theme="light"] .form-inp:focus {
+  background: rgba(37,99,235,.04);
+  border-color: rgba(37,99,235,.4);
+}
+[data-theme="light"] .form-inp::placeholder { color: var(--muted); }
+[data-theme="light"] .c-ico {
+  background: rgba(37,99,235,.07);
+  border-color: rgba(37,99,235,.15);
+}
+
+/* Footer */
+[data-theme="light"] .footer {
+  border-top-color: rgba(15,23,80,.1);
+  background: rgba(255,255,255,.6);
+}
+[data-theme="light"] .footer-bottom { border-top-color: rgba(15,23,80,.08); }
+[data-theme="light"] .soc-ico {
+  background: rgba(15,23,80,.04);
+  border-color: rgba(15,23,80,.1);
+}
+
+/* CTA band */
+[data-theme="light"] .cta-inner {
+  background: rgba(255,255,255,.8);
+  border-color: rgba(15,23,80,.1);
+  box-shadow: 0 24px 60px -20px rgba(37,99,235,.1);
+}
+
+/* Hero availability badge */
+[data-theme="light"] .avail-badge,
+[data-theme="light"] .nav-status {
+  background: rgba(5,150,105,.07);
+  border-color: rgba(5,150,105,.22);
+}
+
+/* Services icons */
+[data-theme="light"] .svc-ico {
+  background: rgba(37,99,235,.08);
+  border-color: rgba(37,99,235,.18);
+}
+
+/* Why section background */
+[data-theme="light"] #why { background:linear-gradient(180deg,transparent,rgba(240,245,255,.6),transparent) !important; }
+[data-theme="light"] #process { background:linear-gradient(180deg,transparent,rgba(240,245,255,.5),transparent) !important; }
+[data-theme="light"] #testimonials { background:linear-gradient(180deg,transparent,rgba(240,245,255,.45),transparent) !important; }
+
+/* FAQ trigger */
+[data-theme="light"] .faq-q { color: var(--text); }
+[data-theme="light"] .faq-q:hover { color: var(--blue); }
+[data-theme="light"] .faq-chev { border-color: rgba(15,23,80,.15); }
+
+/* Welcome overlay */
+[data-theme="light"] #welcomeOverlay {
+  background: #f0f5ff;
+}
+[data-theme="light"] .wov-code { color: rgba(37,99,235,.2); }
+[data-theme="light"] .wov-content .wov-chip {
+  background: rgba(255,255,255,.85);
+  border-color: rgba(15,23,80,.12);
+  color: var(--muted2);
+}
+[data-theme="light"] .wov-progress-track { background: rgba(15,23,80,.07); }
+[data-theme="light"] .wov-avatar {
+  background: #d0dcff;
+  border-color: rgba(27,61,139,.3);
+}
+
+/* Eyebrow pills */
+[data-theme="light"] .eyebrow-pill {
+  background: rgba(37,99,235,.07);
+  border-color: rgba(37,99,235,.18);
+}
+
+/* Tags */
+[data-theme="light"] .tag {
+  background: rgba(37,99,235,.07);
+  border-color: rgba(37,99,235,.18);
+}
+[data-theme="light"] .tag.p {
+  background: rgba(217,119,6,.07);
+  border-color: rgba(217,119,6,.18);
+}
+
+/* Skill track */
+[data-theme="light"] .skill-track { background: rgba(15,23,80,.07); }
+
+/* PM mock */
+[data-theme="light"] .proj-mock { background: #eef3ff; }
+[data-theme="light"] .pm-col { background: rgba(15,23,80,.03); border-color: rgba(15,23,80,.08); }
+
+/* SVG nodes/edges */
+[data-theme="light"] .node { fill: var(--blue); }
+[data-theme="light"] .edge { stroke: rgba(37,99,235,.15); }
+
+/* ── TYPOGRAPHY HELPERS ─────────────────────────────────────── */
+.outfit   { font-family:'Outfit', sans-serif; }
+.mono     { font-family:'JetBrains Mono', monospace; }
+.grad-txt {
+  color: var(--purple);
+  -webkit-text-fill-color: var(--purple);
+}
+
+/* ── SECTION BASICS ─────────────────────────────────────────── */
+section { position:relative; z-index:1; }
+.wrap   { max-width:1240px; margin:0 auto; padding:0 28px; }
+.pad    { padding:100px 0; }
+.pad-sm { padding:70px 0; }
+
+.eyebrow-pill {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:5px 14px;
+  background: rgba(27,61,139,.1);
+  border: 1px solid rgba(27,61,139,.25);
+  border-radius: 30px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.68rem; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase;
+  color: var(--blue);
+  margin-bottom:18px;
+}
+
+.sec-title {
+  font-family:'Outfit', sans-serif;
+  font-size: clamp(1.85rem, 3.8vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.sec-sub {
+  font-size:1.02rem;
+  color: var(--muted);
+  max-width:560px;
+  line-height:1.7;
+}
+
+/* ── BUTTONS ────────────────────────────────────────────────── */
+.btn-cta {
+  display:inline-flex; align-items:center; gap:10px;
+  background: var(--blue);
+  color:#fff; border-radius:50px;
+  padding:13px 28px;
+  font-size:.9rem; font-weight:700;
+  transition: transform .22s, box-shadow .22s, background .22s;
+  box-shadow: 0 8px 28px -8px var(--blue-g);
+  position:relative;
+}
+.btn-cta:hover {
+  transform:translateY(-2px);
+  background: var(--blue-l);
+  box-shadow: 0 14px 36px -6px var(--blue-g);
+  color:#fff;
+}
+
+.btn-ghost {
+  display:inline-flex; align-items:center; gap:10px;
+  background:transparent;
+  border:1px solid var(--border2);
+  color:var(--text); border-radius:50px;
+  padding:12px 26px;
+  font-size:.9rem; font-weight:600;
+  transition: border-color .2s, color .2s, background .2s, box-shadow .2s;
+}
+.btn-ghost:hover {
+  border-color:var(--blue); color:var(--blue);
+  background:rgba(37,99,235,.06);
+  box-shadow:0 0 24px rgba(37,99,235,.14);
+}
+
+/* ── GLASS CARD ─────────────────────────────────────────────── */
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+.glass:hover {
+  border-color: var(--border2);
+  box-shadow: 0 20px 50px -15px rgba(0,0,0,.45);
+}
+
+/* ── REVEAL ANIMATIONS ──────────────────────────────────────── */
+.reveal {
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.in { opacity:1; transform:translateY(0); }
+.d1 { transition-delay:.08s; }
+.d2 { transition-delay:.16s; }
+.d3 { transition-delay:.24s; }
+.d4 { transition-delay:.32s; }
+.d5 { transition-delay:.40s; }
+.d6 { transition-delay:.48s; }
+
+/* ======================================================
+   NAVBAR
+   ====================================================== */
+.navbar-wrap {
+  position:fixed; top:0; left:0; right:0;
+  z-index:1000;
+  padding:20px 0;
+  transition: padding .3s, background .3s, border-color .3s;
+  border-bottom:1px solid transparent;
+}
+.navbar-wrap.stuck {
+  padding:11px 0;
+  background:rgba(11,17,32,.88);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border-bottom-color:var(--border);
+}
+.nav-inner {
+  max-width:1240px; margin:0 auto;
+  padding:0 28px;
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+}
+.nav-brand { display:flex; align-items:center; gap:11px; }
+.brand-icon {
+  width:40px; height:40px; border-radius:12px;
+  background:var(--grad);
+  display:grid; place-items:center;
+  font-family:'Outfit',sans-serif;
+  font-weight:900; font-size:1.15rem; color:#fff;
+  box-shadow:0 6px 20px -4px var(--blue-g);
+  flex-shrink:0;
+}
+.brand-name {
+  font-family:'Outfit',sans-serif;
+  font-weight:800; font-size:1.1rem;
+}
+.nav-menu { display:flex; align-items:center; gap:30px; list-style:none; }
+.nav-menu a {
+  font-size:.83rem; font-weight:600;
+  color:var(--muted);
+  position:relative;
+  transition:color .2s;
+}
+.nav-menu a::after {
+  content:""; position:absolute;
+  bottom:-3px; left:0; right:100%;
+  height:1.5px; background:var(--blue);
+  transition:right .25s ease;
+}
+.nav-menu a:hover { color:var(--text); }
+.nav-menu a:hover::after { right:0; }
+
+.nav-status {
+  display:flex; align-items:center; gap:7px;
+  padding:5px 12px;
+  background:rgba(16,185,129,.07);
+  border:1px solid rgba(16,185,129,.25);
+  border-radius:20px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.67rem; font-weight:700;
+  color:var(--neon); letter-spacing:.1em;
+}
+.npulse {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--neon);
+  box-shadow:0 0 8px var(--neon);
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(1.4)} }
+
+.nav-right { display:flex; align-items:center; gap:10px; }
+.hamburger {
+  display:none;
+  background:transparent; border:1px solid var(--border2);
+  color:var(--muted); width:38px; height:38px;
+  border-radius:10px; align-items:center; justify-content:center;
+  font-size:1.05rem;
+}
+
+/* Mobile nav overlay */
+.mob-nav {
+  position:fixed; inset:0;
+  background:rgba(11,17,32,.97);
+  backdrop-filter:blur(24px);
+  z-index:999;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:24px;
+  opacity:0; pointer-events:none;
+  transition:opacity .3s;
+}
+.mob-nav.open { opacity:1; pointer-events:all; }
+.mob-nav a {
+  font-family:'Outfit',sans-serif;
+  font-size:1.9rem; font-weight:700;
+  color:var(--muted); transition:color .2s;
+}
+.mob-nav a:hover { color:var(--blue); }
+.mob-close {
+  position:absolute; top:22px; right:24px;
+  background:transparent; border:1px solid var(--border2);
+  color:var(--muted); width:38px; height:38px;
+  border-radius:10px; display:grid; place-items:center;
+  font-size:1.1rem;
+}
+
+/* ======================================================
+   HERO
+   ====================================================== */
+.hero {
+  min-height:100vh;
+  display:flex; align-items:center;
+  padding:150px 0 100px;
+  overflow:hidden;
+}
+/* Neural net SVG BG */
+.hero-bg {
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+}
+.hero-bg svg { position:absolute; width:100%; height:100%; opacity:.5; }
+.h-orb {
+  position:absolute; border-radius:50%;
+  filter:blur(90px); pointer-events:none;
+}
+.h-orb-1 {
+  width:640px; height:640px;
+  background:rgba(27,61,139,.12);
+  top:-120px; right:-80px;
+  animation:orbDrift 9s ease-in-out infinite;
+}
+.h-orb-2 {
+  width:500px; height:500px;
+  background:rgba(245,196,0,.09);
+  bottom:-100px; left:-60px;
+  animation:orbDrift 11s ease-in-out infinite reverse;
+}
+@keyframes orbDrift {
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(30px,-25px) scale(1.05)}
+  66%{transform:translate(-20px,30px) scale(.96)}
+}
+
+.hero-particles { position:absolute; inset:0; overflow:hidden; z-index:0; }
+.hp {
+  position:absolute; width:2px; height:2px; border-radius:50%;
+  background:var(--blue); box-shadow:0 0 6px var(--blue);
+  animation:rise 20s infinite linear; opacity:0;
+}
+@keyframes rise {
+  0%{transform:translateY(100vh);opacity:0}
+  10%{opacity:.6} 90%{opacity:.6}
+  100%{transform:translateY(-80px);opacity:0}
+}
+
+.hero-inner { position:relative; z-index:1; }
+
+/* availability badge */
+.avail-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 14px 6px 9px;
+  background:rgba(16,185,129,.07);
+  border:1px solid rgba(16,185,129,.22);
+  border-radius:30px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem; font-weight:700;
+  color:var(--neon); letter-spacing:.1em;
+  margin-bottom:26px;
+}
+.avail-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:var(--neon); box-shadow:0 0 9px var(--neon);
+  animation:pulse 1.6s infinite;
+}
+
+.hero h1 {
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(2.9rem,6.5vw,5.4rem);
+  font-weight:900;
+  letter-spacing:-.045em;
+  line-height:1.0;
+  margin-bottom:26px;
+  max-width:940px;
+}
+
+/* morphing word — typewriter */
+.morph-wrap {
+  display:inline-block; position:relative;
+  min-width:320px; text-align:left; vertical-align:bottom;
+}
+.morph-word {
+  display:inline;
+}
+.morph-cursor {
+  display:inline-block; width:3px; height:.82em;
+  background:var(--blue);
+  margin-left:2px; vertical-align:middle;
+  border-radius:1px;
+  box-shadow:0 0 10px var(--blue), 0 0 20px rgba(37,99,235,.4);
+  animation:caretBlink 1.1s step-start infinite;
+}
+@keyframes caretBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.hero-lede {
+  font-size:1.12rem; color:var(--muted);
+  max-width:600px; margin-bottom:38px; line-height:1.72;
+}
+.hero-ctas { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:58px; }
+
+.hero-tag {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem; color:var(--muted); letter-spacing:.1em; font-weight:600;
+  margin-top:-42px; margin-bottom:58px;
+}
+.hero-tag .dot { color:var(--neon); }
+
+.hero-metrics { display:flex; gap:48px; flex-wrap:wrap; }
+.metric-val {
+  font-family:'Outfit',sans-serif;
+  font-size:2.1rem; font-weight:900;
+  letter-spacing:-.03em; color:var(--text);
+  display:block;
+}
+.metric-val .accent-num { color:var(--blue); }
+.metric-lbl {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.66rem; color:var(--muted);
+  letter-spacing:.14em; text-transform:uppercase; font-weight:600;
+  margin-top:4px;
+}
+
+
+/* ── HERO TWO-COLUMN LAYOUT ──────────────────────────────── */
+.hero-2col {
+  display:grid;
+  grid-template-columns:1fr 400px;
+  align-items:center;
+  gap:60px;
+  min-height:calc(100vh - 220px);
+  position:relative; z-index:1;
+}
+.hero-text { display:flex; flex-direction:column; }
+
+/* ── DEVELOPER PHOTO ─────────────────────────────────────── */
+.hero-photo-wrap {
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 30px;
+}
+.hphoto-badge {
+  position:absolute;
+  background:var(--card);
+  border:1px solid var(--border2);
+  border-radius:12px; padding:10px 13px;
+  backdrop-filter:blur(18px);
+  box-shadow:var(--shadow-md);
+  z-index:4; display:flex; align-items:center; gap:9px;
+  font-size:.73rem; white-space:nowrap;
+}
+.hpb-ico {
+  width:30px; height:30px; border-radius:8px;
+  background:rgba(27,61,139,.12);
+  border:1px solid rgba(27,61,139,.2);
+  display:grid; place-items:center;
+  font-size:.82rem; color:var(--blue); flex-shrink:0;
+}
+.hpb-t { font-weight:700; color:var(--text); line-height:1.2; font-size:.75rem; }
+.hpb-s { color:var(--muted); font-size:.66rem; }
+.hpb-1 { top:2%; right:0; animation:bobA 4s ease-in-out infinite; }
+.hpb-2 { bottom:14%; right:-10px; animation:bobA 5.5s ease-in-out infinite .8s; }
+.hpb-3 { top:30%; left:-10px; animation:bobA 4.8s ease-in-out infinite 1.4s; }
+@keyframes bobA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+.hero-photo-frame {
+  position:relative; width:280px; z-index:2;
+}
+.hero-photo-ring {
+  position:absolute; border-radius:50%;
+  border:1px solid rgba(27,61,139,.18);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.hero-photo-ring-1 { width:330px; height:330px; animation:spinRing 18s linear infinite; }
+.hero-photo-ring-2 { width:380px; height:380px; border-color:rgba(245,196,0,.1); animation:spinRing 24s linear infinite reverse; }
+.hero-photo-inner {
+  width:100%; aspect-ratio:3/4;
+  border-radius:22px; overflow:hidden;
+  border:3px solid var(--blue);
+  box-shadow:
+    0 0 0 6px rgba(27,61,139,.14),
+    0 24px 60px -12px rgba(0,0,0,.65),
+    0 0 36px rgba(27,61,139,.3);
+  position:relative; z-index:2;
+  background:var(--bg2);
+}
+.hero-photo-img {
+  width:100%; height:100%;
+  object-fit:cover; display:block;
+  transition:transform .4s ease;
+}
+.hero-photo-frame:hover .hero-photo-img { transform:scale(1.03); }
+.hero-photo-fallback {
+  width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bg2);
+}
+.hphoto-online {
+  position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+  background:var(--bg2);
+  border:1px solid rgba(16,185,129,.3);
+  border-radius:20px; padding:4px 13px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.6rem; font-weight:700; color:var(--neon);
+  letter-spacing:.1em; display:flex; align-items:center; gap:6px;
+  z-index:3; white-space:nowrap;
+  box-shadow:var(--shadow-sm);
+}
+.hphoto-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--neon); box-shadow:0 0 8px var(--neon);
+  animation:pulse 1.6s infinite;
+}
+.hphoto-namecard {
+  position:absolute; bottom:-14px; left:50%; transform:translateX(-50%);
+  background:var(--blue); border-radius:12px;
+  padding:9px 20px; text-align:center; z-index:3;
+  box-shadow:var(--shadow-md); white-space:nowrap;
+}
+.hphoto-name {
+  font-family:'Outfit',sans-serif;
+  font-size:.85rem; font-weight:800; color:#fff; line-height:1.2;
+}
+.hphoto-title {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.6rem; color:var(--purple);
+  letter-spacing:.08em; margin-top:2px;
+  display:flex; align-items:center; justify-content:center; gap:5px;
+}
+@media(max-width:1100px){
+  .hero-2col { grid-template-columns:1fr; gap:0; }
+  .hero-photo-wrap { display:none; }
+}
+
+/* ======================================================
+   TECH STACK
+   ====================================================== */
+.tech-strip {
+  padding:56px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.tech-eyebrow {
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--muted); margin-bottom:32px;
+}
+.tech-chips { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+.tc {
+  display:inline-flex; align-items:center; gap:7px;
+  padding:9px 17px;
+  background:rgba(17,24,39,.65);
+  border:1px solid var(--border); border-radius:40px;
+  font-size:.8rem; font-weight:600; color:var(--muted2);
+  cursor:default;
+  transition:border-color .2s, color .2s, transform .2s, box-shadow .2s;
+}
+.tc:hover {
+  border-color:var(--blue); color:var(--text);
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px -6px rgba(37,99,235,.22);
+}
+.tc i { font-size:.88rem; }
+.cc-bl{color:#2563eb!important} .cc-pu{color:#f59e0b!important}
+.cc-gr{color:#10b981!important} .cc-or{color:#f59e0b!important}
+.cc-re{color:#1d4ed8!important} .cc-ye{color:#fbbf24!important}
+.cc-pi{color:#2563eb!important} .cc-cy{color:#1d4ed8!important}
+
+/* ======================================================
+   SERVICES
+   ====================================================== */
+.services-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+}
+.svc-card {
+  padding:30px 26px;
+  background:var(--card);
+  border:1px solid var(--border); border-radius:var(--r-xl);
+  position:relative; overflow:hidden; cursor:default;
+  transition:transform .25s, border-color .25s, box-shadow .25s;
+}
+.svc-card::before {
+  content:""; position:absolute; inset:0;
+  background:var(--grad); opacity:0; border-radius:inherit;
+  transition:opacity .25s;
+}
+.svc-card:hover {
+  transform:translateY(-6px);
+  border-color:rgba(37,99,235,.32);
+  box-shadow:0 20px 50px -15px rgba(37,99,235,.2);
+}
+.svc-card:hover::before { opacity:.035; }
+.svc-ico {
+  width:50px;height:50px;
+  background:rgba(37,99,235,.1);
+  border:1px solid rgba(37,99,235,.2);
+  border-radius:14px; display:grid; place-items:center;
+  font-size:1.25rem; color:var(--blue); margin-bottom:18px;
+  position:relative;z-index:1;
+  transition:background .25s, box-shadow .25s;
+}
+.svc-card:hover .svc-ico {
+  background:rgba(37,99,235,.18);
+  box-shadow:0 0 20px rgba(37,99,235,.28);
+}
+.svc-title {
+  font-family:'Outfit',sans-serif;
+  font-size:1.05rem;font-weight:700;color:var(--text);
+  margin-bottom:9px;position:relative;z-index:1;
+}
+.svc-desc {
+  font-size:.85rem;color:var(--muted);
+  line-height:1.68;position:relative;z-index:1;
+}
+
+/* ======================================================
+   WHY HIRE ME
+   ====================================================== */
+.why-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+
+.why-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+.why-row {
+  display:flex; align-items:flex-start; gap:15px;
+  padding:18px 22px;
+  background:rgba(17,24,39,.55);
+  border:1px solid var(--border); border-radius:var(--r-xl);
+  transition:border-color .22s, transform .22s;
+}
+.why-row:hover { border-color:rgba(37,99,235,.25); transform:translateX(6px); }
+.why-ico {
+  width:40px;height:40px;min-width:40px;
+  background:rgba(27,61,139,.1);
+  border:1px solid rgba(37,99,235,.2);
+  border-radius:11px;display:grid;place-items:center;
+  font-size:.95rem;color:var(--blue);
+}
+.why-txt strong { display:block;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px; }
+.why-txt span   { font-size:.82rem;color:var(--muted); }
+
+/* Visual side — skill bars card */
+.why-visual { position:relative; height:460px; }
+.wv-main {
+  position:absolute; top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:300px;
+  background:rgba(17,24,39,.88);
+  border:1px solid var(--border2);
+  border-radius:18px; padding:24px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 24px 50px -15px rgba(0,0,0,.55);
+}
+.wv-title {
+  font-family:'Outfit',sans-serif;
+  font-size:.95rem;font-weight:700;
+  margin-bottom:18px;color:var(--text);
+}
+.skill-row { margin-bottom:13px; }
+.skill-lbl {
+  display:flex;justify-content:space-between;
+  font-size:.73rem;color:var(--muted);margin-bottom:5px;
+}
+.skill-track {
+  height:6px;background:rgba(255,255,255,.06);
+  border-radius:3px;overflow:hidden;
+}
+.skill-fill {
+  height:100%;background:var(--blue);border-radius:3px;
+  width:0;transition:width 1.5s ease;
+}
+
+.wv-badge {
+  position:absolute;
+  background:rgba(17,24,39,.88);
+  border:1px solid var(--border2);
+  border-radius:14px;padding:13px 16px;
+  backdrop-filter:blur(18px);
+  box-shadow:0 14px 36px -10px rgba(0,0,0,.5);
+  display:flex;align-items:center;gap:10px;
+}
+.wvb-1 { top:9%;right:-10px;animation:bobA 5s ease-in-out infinite; }
+.wvb-2 { bottom:9%;left:-10px;animation:bobA 6s ease-in-out infinite 1.5s; }
+.wvb-ico {
+  width:34px;height:34px;border-radius:9px;
+  background:rgba(37,99,235,.1);display:grid;
+  place-items:center;color:var(--blue);font-size:.88rem;
+}
+.wvb-t strong { display:block;font-size:.82rem;font-weight:700; }
+.wvb-t small  { font-size:.7rem;color:var(--muted); }
+
+/* ======================================================
+   CAREER TIMELINE
+   ====================================================== */
+.career-timeline {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  max-width:960px;
+  margin:0 auto;
+}
+.career-timeline::before {
+  content:"";
+  position:absolute;
+  left:50%; transform:translateX(-50%);
+  top:40px; bottom:40px; width:2px;
+  background:var(--blue);
+  opacity:.22;
+}
+.ct-item {
+  display:grid;
+  grid-template-columns:1fr 60px 1fr;
+  align-items:start;
+  gap:0; padding:12px 0; position:relative;
+}
+.ct-node {
+  display:flex; align-items:center; justify-content:center;
+  padding-top:18px; position:relative; z-index:2;
+}
+.ct-dot {
+  width:48px; height:48px; border-radius:50%;
+  background:var(--bg2);
+  border:2px solid var(--border2);
+  display:grid; place-items:center;
+  font-size:1rem; color:var(--blue);
+  transition:border-color .3s, box-shadow .3s, background .3s;
+  cursor:default; flex-shrink:0;
+}
+.ct-item:hover .ct-dot {
+  border-color:var(--blue);
+  box-shadow:0 0 20px var(--blue-g);
+  background:rgba(27,61,139,.1);
+}
+.ct-item.current .ct-dot {
+  border-color:var(--blue);
+  background:rgba(27,61,139,.12);
+  box-shadow:0 0 24px var(--blue-g);
+  animation:ctPulse 2.4s infinite;
+}
+@keyframes ctPulse {
+  0%,100%{box-shadow:0 0 20px var(--blue-g)}
+  50%{box-shadow:0 0 38px rgba(27,61,139,.55)}
+}
+/* Left column — card sits right-aligned */
+.ct-left {
+  padding-right:24px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+}
+/* Right column — card sits left-aligned */
+.ct-right {
+  padding-left:24px;
+  display:flex;
+  align-items:flex-start;
+}
+/* Flip: swap columns */
+.ct-item.flip .ct-left  { order:3; padding-left:24px; padding-right:0; justify-content:flex-start; }
+.ct-item.flip .ct-node  { order:2; }
+.ct-item.flip .ct-right { order:1; padding-right:24px; padding-left:0; justify-content:flex-end; }
+
+.ct-card {
+  background:rgba(7,17,43,.72);
+  border:1px solid var(--border);
+  border-radius:var(--r-xl);
+  padding:20px 22px;
+  width:100%; max-width:380px;
+  backdrop-filter:blur(16px);
+  transition:border-color .25s, box-shadow .25s;
+  cursor:default;
+  /* ALWAYS left-align content inside cards */
+  text-align:left;
+}
+.ct-card:hover {
+  border-color:rgba(27,61,139,.32);
+  box-shadow:0 14px 36px -10px rgba(0,0,0,.4);
+}
+.ct-item.current .ct-card {
+  border-color:rgba(27,61,139,.3);
+  background:rgba(7,17,43,.88);
+}
+.ct-period {
+  font-family:'JetBrains Mono', monospace;
+  font-size:.62rem; font-weight:700;
+  letter-spacing:.13em; text-transform:uppercase;
+  color:var(--blue); margin-bottom:7px;
+  display:flex; align-items:center; gap:7px; flex-wrap:wrap;
+}
+.ct-now {
+  display:inline-flex; align-items:center; gap:5px;
+  background:rgba(16,185,129,.1);
+  border:1px solid rgba(16,185,129,.25);
+  border-radius:20px; padding:2px 9px;
+  font-size:.58rem; color:var(--neon); letter-spacing:.1em;
+}
+.ct-now::before {
+  content:""; width:5px; height:5px; border-radius:50%;
+  background:var(--neon); box-shadow:0 0 6px var(--neon);
+  animation:pulse 1.6s infinite;
+}
+.ct-role {
+  font-family:'Outfit', sans-serif;
+  font-size:.97rem; font-weight:800; color:var(--text);
+  margin-bottom:3px; line-height:1.2;
+}
+.ct-company {
+  font-size:.77rem; font-weight:600; color:var(--muted);
+  margin-bottom:10px; display:flex; align-items:center; gap:6px;
+}
+.ct-company i { color:var(--blue); font-size:.73rem; flex-shrink:0; }
+.ct-highlights { list-style:none; display:flex; flex-direction:column; gap:5px; }
+.ct-highlights li {
+  font-size:.78rem; 
+  color:var(--muted);
+  display:flex; 
+  align-items:flex-start; 
+  flex-direction:column;
+  gap:7px; 
+  line-height:1.5;
+  text-align:left;
+}
+/* .ct-highlights li::before { content:"▸"; color:var(--blue); font-size:.66rem; margin-top:2px; flex-shrink:0;} */
+.ct-tags { display:flex; flex-wrap:wrap; gap:4px; margin-top:12px; text-align:left; }
+
+/* Side notes — always vertically aligned to card top */
+.ct-side-note {
+  padding-top:18px;
+  padding-left:4px;
+  max-width:220px;
+}
+.ct-item.flip .ct-left .ct-side-note {
+  padding-left:0;
+  padding-right:4px;
+  text-align:right;
+  margin-left:auto;
+}
+.ct-snl {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.62rem; font-weight:700;
+  letter-spacing:.16em; color:var(--blue);
+  text-transform:uppercase; margin-bottom:8px;
+}
+.ct-snt {
+  font-family:'Outfit',sans-serif;
+  font-size:.9rem; font-weight:700;
+  color:var(--text); margin-bottom:5px; line-height:1.3;
+}
+.ct-sns { font-size:.78rem; color:var(--muted); line-height:1.65; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .career-timeline::before { left:24px; transform:none; }
+  .ct-item { grid-template-columns:48px 1fr; }
+  .ct-left  { display:none !important; }
+  /* Reset flip ordering on mobile */
+  .ct-item.flip .ct-node  { order:unset; }
+  .ct-item.flip .ct-right { order:unset; padding-right:0; padding-left:18px; justify-content:flex-start; }
+  .ct-item.flip .ct-left  { display:none !important; }
+  .ct-right { padding-left:18px; }
+  .ct-card  { max-width:100%; }
+  .ct-dot   { width:42px; height:42px; font-size:.9rem; }
+}
+
+/* side notes */
+.ct-side-note {
+  padding-top:20px; padding-left:6px;
+}
+.ct-item.flip .ct-side-note { padding-left:0; padding-right:6px; }
+.ct-snl {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.64rem; font-weight:700;
+  letter-spacing:.18em; color:var(--blue);
+  text-transform:uppercase; margin-bottom:7px;
+}
+.ct-snt {
+  font-family:'Outfit',sans-serif;
+  font-size:.92rem; font-weight:700;
+  color:var(--text); margin-bottom:5px; line-height:1.3;
+}
+.ct-sns { font-size:.8rem; color:var(--muted); line-height:1.65; }
+
+/* education card */
+.edu-card {
+  display:flex; align-items:center; gap:22px;
+  background:var(--card);
+  border:1px solid var(--border-blue);
+  border-radius:var(--r-xl);
+  padding:26px 30px;
+  position:relative; overflow:hidden;
+  transition:border-color .25s, box-shadow .25s;
+}
+.edu-card:hover {
+  border-color:var(--blue);
+  box-shadow:0 12px 36px -10px var(--blue-g);
+}
+.edu-card::before {
+  content:""; position:absolute;
+  left:0; top:0; bottom:0; width:4px;
+  background:var(--blue);
+  border-radius:4px 0 0 4px;
+}
+.edu-icon {
+  width:54px; height:54px; min-width:54px;
+  background:rgba(27,61,139,.12);
+  border:1px solid rgba(27,61,139,.25);
+  border-radius:14px;
+  display:grid; place-items:center;
+  font-size:1.3rem; color:var(--blue);
+}
+.edu-body { flex:1; }
+.edu-label {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.63rem; font-weight:700;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--blue); margin-bottom:5px;
+}
+.edu-degree {
+  font-family:'Outfit',sans-serif;
+  font-size:1.05rem; font-weight:800;
+  color:var(--text); margin-bottom:4px;
+}
+.edu-school {
+  font-size:.84rem; color:var(--muted);
+  display:flex; align-items:center; gap:6px;
+}
+.edu-school i { font-size:.78rem; color:var(--blue); }
+.edu-badge {
+  display:inline-flex; align-items:center; gap:7px;
+  padding:7px 16px;
+  background:rgba(27,61,139,.1);
+  border:1px solid rgba(27,61,139,.25);
+  border-radius:30px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem; font-weight:700;
+  color:var(--blue); letter-spacing:.1em;
+  flex-shrink:0;
+}
+[data-theme="light"] .edu-card { background:rgba(255,255,255,.9); }
+@media(max-width:600px){
+  .edu-card { flex-direction:column; align-items:flex-start; gap:14px; }
+  .edu-badge { align-self:flex-start; }
+}
+
+/* ======================================================
+   PROJECTS
+   ====================================================== */
+.projects-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.proj-card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px; overflow:hidden;
+  transition:transform .26s, border-color .26s, box-shadow .26s;
+}
+.proj-card:hover {
+  transform:translateY(-5px);
+  border-color:rgba(37,99,235,.28);
+  box-shadow:0 18px 40px -12px rgba(0,0,0,.5);
+}
+.proj-mock {
+  height:110px; position:relative; overflow:hidden;
+  background:#060d1f;
+}
+.pm-bg {
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.8rem;opacity:.07;
+}
+.pm-content {
+  position:absolute;inset:11px;
+  display:flex;flex-direction:column;gap:5px;
+}
+.pm-bar { height:5px;border-radius:3px;background:rgba(37,99,235,.2); }
+.pm-bar.b2{background:rgba(245,158,11,.2);width:68%;}
+.pm-bar.b3{width:40%;}
+.pm-row { display:flex;gap:5px;flex:1; }
+.pm-col {
+  flex:1;background:rgba(255,255,255,.025);
+  border:1px solid var(--border);border-radius:5px;
+}
+.proj-overlay {
+  position:absolute;inset:0;
+  background:rgba(27,61,139,.18);
+  opacity:0;transition:opacity .26s;
+  display:flex;align-items:center;justify-content:center;
+}
+.proj-card:hover .proj-overlay { opacity:1; }
+.proj-ov-btn {
+  background:rgba(11,17,32,.9);
+  border:1px solid var(--border2);
+  color:#ffffff;
+  ;border-radius:16px;
+  padding:6px 12px;font-size:.72rem;font-weight:600;
+  display:flex;align-items:center;gap:6px;cursor:pointer;
+}
+.proj-body { padding:14px; }
+.proj-industry {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.58rem;font-weight:600;
+  letter-spacing:.12em;color:var(--purple);
+  text-transform:uppercase;margin-bottom:5px;
+}
+.proj-title {
+  font-family:'Outfit',sans-serif;
+  font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.3;
+}
+.proj-desc { font-size:.76rem;color:var(--muted);line-height:1.55;margin-bottom:10px; }
+.proj-tags { display:flex;flex-wrap:wrap;gap:4px; }
+.tag {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.57rem;font-weight:600;letter-spacing:.03em;
+  padding:2px 7px;border-radius:20px;
+  background:rgba(37,99,235,.08);
+  border:1px solid rgba(37,99,235,.18);
+  color:var(--blue);
+}
+.tag.p {
+  background:rgba(245,158,11,.08);
+  border-color:rgba(245,158,11,.18);
+  color:var(--purple);
+}
+
+/* ======================================================
+   PROCESS
+   ====================================================== */
+.process-wrap { max-width:780px;margin:0 auto; }
+.process-line {
+  position:relative;display:flex;flex-direction:column;gap:0;
+}
+.process-line::before {
+  content:"";position:absolute;
+  left:27px;top:28px;bottom:28px;width:2px;
+  background:var(--blue);
+  opacity:.28;
+}
+.proc-item { display:flex;gap:26px;padding:18px 0;position:relative; }
+.proc-num {
+  width:56px;height:56px;min-width:56px;
+  background:rgba(17,24,39,.95);
+  border:2px solid var(--border2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:var(--blue);
+  position:relative;z-index:1;
+  transition:border-color .25s,box-shadow .25s,background .25s;
+}
+.proc-item:hover .proc-num {
+  border-color:var(--blue);
+  box-shadow:0 0 22px rgba(37,99,235,.3);
+  background:rgba(37,99,235,.07);
+}
+.proc-box {
+  flex:1;padding:16px 20px;
+  background:rgba(17,24,39,.55);
+  border:1px solid var(--border);border-radius:var(--r-xl);
+  margin-top:4px;
+  transition:border-color .25s,transform .25s;
+}
+.proc-item:hover .proc-box { border-color:rgba(37,99,235,.2);transform:translateX(5px); }
+.proc-title {
+  font-family:'Outfit',sans-serif;
+  font-size:.97rem;font-weight:700;color:var(--text);margin-bottom:5px;
+}
+.proc-desc { font-size:.84rem;color:var(--muted);line-height:1.65; }
+
+/* ======================================================
+   PRICING
+   ====================================================== */
+.pricing-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start; }
+.plan-card {
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r-xl);padding:34px 26px;
+  position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.plan-card:hover { transform:translateY(-4px);box-shadow:0 20px 50px -14px rgba(0,0,0,.4); }
+.plan-card.hot {
+  border-color:rgba(37,99,235,.38);
+  background:rgba(17,24,39,.88);
+  box-shadow:0 0 0 1px rgba(37,99,235,.1),0 24px 60px -14px rgba(37,99,235,.22);
+}
+.plan-card.hot::before { /* gold accent bar */
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--grad);
+}
+.plan-badge {
+  position:absolute;top:16px;right:16px;
+  background:var(--grad);color:#fff;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.61rem;font-weight:700;letter-spacing:.1em;
+  padding:4px 11px;border-radius:20px;
+}
+.plan-tier {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:10px;
+}
+.plan-price {
+  font-family:'Outfit',sans-serif;
+  font-size:2.5rem;font-weight:900;
+  letter-spacing:-.04em;color:var(--text);line-height:1;margin-bottom:5px;
+}
+.plan-price sup { font-size:1.1rem;vertical-align:super;font-weight:700;color:var(--muted); }
+.plan-note { font-size:.78rem;color:var(--muted);margin-bottom:24px; }
+.plan-div { height:1px;background:var(--border);margin:20px 0; }
+.plan-features { list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px; }
+.plan-features li { display:flex;align-items:center;gap:9px;font-size:.84rem;color:var(--muted2); }
+.plan-features li i { color:var(--neon);font-size:.78rem;flex-shrink:0; }
+
+/* ======================================================
+   TESTIMONIALS
+   ====================================================== */
+.testi-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+.testi-card {
+  padding:26px 22px;
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);
+  transition:border-color .22s,transform .22s,box-shadow .22s;
+}
+.testi-card:hover {
+  border-color:rgba(37,99,235,.2);transform:translateY(-4px);
+  box-shadow:0 20px 50px -14px rgba(0,0,0,.4);
+}
+.stars { color:#eab308;letter-spacing:2px;font-size:.82rem;margin-bottom:12px; }
+.testi-txt { font-size:.88rem;color:var(--muted2);line-height:1.72;margin-bottom:18px;font-style:italic; }
+.testi-author { display:flex;align-items:center;gap:11px; }
+.t-avatar {
+  width:40px;height:40px;border-radius:50%;
+  background:var(--grad);display:grid;place-items:center;
+  font-family:'Outfit',sans-serif;font-weight:800;font-size:.95rem;color:#fff;flex-shrink:0;
+}
+.t-name { font-weight:700;font-size:.86rem;color:var(--text); }
+.t-pos  { font-size:.73rem;color:var(--muted);font-family:'JetBrains Mono',monospace; }
+
+/* ======================================================
+   FAQ
+   ====================================================== */
+.faq-wrap { max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:11px; }
+.faq-item {
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;
+  transition:border-color .22s;
+}
+.faq-item.open { border-color:rgba(37,99,235,.25); }
+.faq-q {
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:18px 22px;background:transparent;color:var(--text);
+  font-size:.9rem;font-weight:600;text-align:left;transition:color .2s;
+}
+.faq-q:hover { color:var(--blue); }
+.faq-chev {
+  width:26px;height:26px;border-radius:50%;
+  border:1px solid var(--border);display:grid;place-items:center;
+  font-size:.78rem;color:var(--muted);flex-shrink:0;
+  transition:transform .3s,border-color .2s,color .2s;
+}
+.faq-item.open .faq-chev { transform:rotate(180deg);border-color:var(--blue);color:var(--blue); }
+.faq-a { max-height:0;overflow:hidden;transition:max-height .4s ease; }
+.faq-ai { padding:0 22px 18px;font-size:.86rem;color:var(--muted);line-height:1.72; }
+
+/* ======================================================
+   CONTACT
+   ====================================================== */
+.contact-section { padding:100px 0;overflow:hidden; }
+.contact-section::before {
+  content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);
+  width:800px;height:600px;
+  background:radial-gradient(circle,rgba(37,99,235,.07),transparent 70%);
+  pointer-events:none;
+}
+.contact-card {
+  background:rgba(17,24,39,.78);border:1px solid var(--border);
+  border-radius:26px;padding:60px;overflow:hidden;position:relative;
+  backdrop-filter:blur(20px);
+}
+.contact-card::before {
+  content:"";position:absolute;top:-120px;right:-120px;width:360px;height:360px;
+  background:radial-gradient(circle,rgba(37,99,235,.11),transparent 70%);filter:blur(40px);
+}
+.contact-card::after {
+  content:"";position:absolute;bottom:-120px;left:-120px;width:360px;height:360px;
+  background:radial-gradient(circle,rgba(245,158,11,.09),transparent 70%);filter:blur(40px);
+}
+.contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:56px;position:relative;z-index:1; }
+.contact-h {
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(1.75rem,3.4vw,2.35rem);
+  font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;
+}
+.contact-sub { font-size:.9rem;color:var(--muted);margin-bottom:28px;line-height:1.68; }
+.contact-links { display:flex;flex-direction:column;gap:13px; }
+.c-link {
+  display:flex;align-items:center;gap:11px;
+  font-size:.86rem;color:var(--muted2);transition:color .2s;
+}
+.c-link:hover { color:var(--blue); }
+.c-ico {
+  width:34px;height:34px;
+  background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.15);
+  border-radius:9px;display:grid;place-items:center;
+  font-size:.82rem;color:var(--blue);flex-shrink:0;
+}
+.form-lbl {
+  display:block;font-size:.75rem;font-weight:600;
+  color:var(--muted);margin-bottom:6px;letter-spacing:.04em;
+}
+.form-inp {
+  width:100%;background:rgba(255,255,255,.04);
+  border:1px solid var(--border);border-radius:11px;
+  padding:11px 15px;color:var(--text);
+  font-family:'Manrope',sans-serif;font-size:.86rem;outline:none;
+  transition:border-color .2s,background .2s,box-shadow .2s;
+}
+.form-inp::placeholder { color:var(--muted); }
+.form-inp:focus {
+  border-color:rgba(37,99,235,.45);
+  background:rgba(37,99,235,.04);
+  box-shadow:0 0 0 3px rgba(37,99,235,.1);
+}
+textarea.form-inp { resize:vertical;min-height:110px; }
+.form-row { margin-bottom:14px; }
+
+/* ======================================================
+   FINAL CTA BAND
+   ====================================================== */
+.cta-band { padding:100px 0; }
+.cta-inner {
+  background:var(--card);
+  border:1px solid var(--border2);
+  border-radius:24px;padding:56px 40px;text-align:center;
+  position:relative;overflow:hidden;
+  box-shadow:0 24px 60px -20px rgba(37,99,235,.18);
+}
+.cta-inner::before {
+  content:"";position:absolute;top:-80px;right:-80px;
+  width:280px;height:280px;
+  background:radial-gradient(circle,rgba(37,99,235,.14),transparent 70%);
+  filter:blur(40px);pointer-events:none;
+}
+.cta-inner::after {
+  content:"";position:absolute;bottom:-80px;left:-80px;
+  width:280px;height:280px;
+  background:radial-gradient(circle,rgba(245,158,11,.11),transparent 70%);
+  filter:blur(40px);pointer-events:none;
+}
+.cta-glyph {
+  position:absolute;font-family:'JetBrains Mono',monospace;
+  font-size:.63rem;color:var(--muted);letter-spacing:.15em;font-weight:600;z-index:1;opacity:.6;
+}
+.cta-glyph.tl{top:16px;left:22px;color:var(--blue)}
+.cta-glyph.tr{top:16px;right:22px;color:var(--neon)}
+.cta-glyph.bl{bottom:16px;left:22px}
+.cta-glyph.br{bottom:16px;right:22px}
+.cta-h {
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;
+  letter-spacing:-.03em;line-height:1.12;
+  margin-bottom:12px;color:var(--text);position:relative;z-index:1;
+}
+.cta-h .accent { color:var(--blue); }
+.cta-p { color:var(--muted);font-size:.98rem;line-height:1.65;max-width:520px;margin:0 auto 26px;position:relative;z-index:1; }
+.cta-btns { display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:1; }
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+.footer { border-top:1px solid var(--border);padding:50px 0 30px; }
+.footer-top {
+  display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:40px;margin-bottom:44px;
+}
+.footer-brand-desc { font-size:.84rem;color:var(--muted);line-height:1.7;margin-top:12px;max-width:250px; }
+.footer-col-h {
+  font-family:'Outfit',sans-serif;
+  font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:14px;letter-spacing:.02em;
+}
+.footer-links { list-style:none;display:flex;flex-direction:column;gap:9px; }
+.footer-links a { font-size:.81rem;color:var(--muted);transition:color .2s; }
+.footer-links a:hover { color:var(--blue); }
+.footer-bottom {
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  padding-top:28px;border-top:1px solid var(--border);
+}
+.footer-copy {
+  font-family:'JetBrains Mono',monospace;
+  font-size:.68rem;color:var(--muted);letter-spacing:.05em;
+}
+.soc-strip { display:flex;gap:9px; }
+.soc-ico {
+  width:34px;height:34px;background:rgba(255,255,255,.04);
+  border:1px solid var(--border);border-radius:9px;
+  display:grid;place-items:center;font-size:.88rem;color:var(--muted);
+  transition:border-color .2s,color .2s,background .2s;
+}
+.soc-ico:hover { border-color:var(--blue);color:var(--blue);background:rgba(37,99,235,.06); }
+.sys-ok {
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;
+  color:var(--neon);font-weight:600;
+}
+.sys-ok::before {
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--neon);box-shadow:0 0 6px var(--neon);
+}
+
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+@media(max-width:1100px) {
+  .why-visual { display:none; }
+  .why-grid { grid-template-columns:1fr; }
+  .projects-grid { grid-template-columns:repeat(3,1fr); }
+}
+@media(max-width:900px) {
+  .nav-menu { display:none; }
+  .hamburger { display:flex; }
+  .services-grid  { grid-template-columns:repeat(2,1fr); }
+  .projects-grid  { grid-template-columns:repeat(2,1fr); }
+  .pricing-grid   { grid-template-columns:1fr;max-width:380px;margin:0 auto; }
+  .testi-grid     { grid-template-columns:1fr; }
+  .contact-grid   { grid-template-columns:1fr;gap:36px; }
+  .footer-top     { grid-template-columns:1fr 1fr;gap:28px; }
+}
+@media(max-width:600px) {
+  .hero        { padding:110px 0 60px; }
+  .pad         { padding:72px 0; }
+  .services-grid  { grid-template-columns:1fr; }
+  .projects-grid  { grid-template-columns:1fr; }
+  .hero-metrics   { gap:28px; }
+  .contact-card   { padding:32px 22px; }
+  .footer-top     { grid-template-columns:1fr; }
+  .cta-inner      { padding:40px 22px; }
+  .cta-glyph      { display:none; }
+}
+
+/* ======================================================
+   THEME TOGGLE BUTTON
+   ====================================================== */
+.theme-toggle {
+  position:relative;
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: 50px;
+  width: 60px; height: 30px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: border-color .3s, background .3s, box-shadow .3s;
+  box-shadow: var(--shadow-sm);
+}
+.theme-toggle:hover {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+.tt-track {
+  display: block;
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.tt-thumb {
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--grad);
+  box-shadow: 0 2px 8px rgba(37,99,235,.4);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+  font-size: .65rem; color: #fff;
+}
+[data-theme="light"] .tt-thumb {
+  transform: translateX(30px);
+  background: var(--purple);
+  box-shadow: 0 2px 10px rgba(249,115,22,.5);
+}
+/* Show correct icon */
+.tt-icon-dark  { display:block; }
+.tt-icon-light { display:none; }
+[data-theme="light"] .tt-icon-dark  { display:none; }
+[data-theme="light"] .tt-icon-light { display:block; }
+
+/* Track tint */
+.tt-track::before {
+  content:"";
+  position:absolute; inset:0; border-radius:50px;
+  background: rgba(27,61,139,.12);
+  transition: background .35s;
+}
+[data-theme="light"] .tt-track::before {
+  background: rgba(245,196,0,.12);
+}
+
+/* ======================================================
+   WELCOME OVERLAY
+   ====================================================== */
+#welcomeOverlay {
+  position:fixed; inset:0; z-index:9999;
+  background: var(--bg);
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column;
+  overflow:hidden;
+  transition:opacity .8s ease, transform .8s ease;
+}
+#welcomeOverlay.hiding {
+  opacity:0;
+  pointer-events:none;
+  transform:scale(1.03);
+}
+
+/* — grid lines same as body — */
+#welcomeOverlay::before {
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+  background-size:72px 72px;
+  pointer-events:none;
+}
+
+/* — ambient orbs — */
+.wov-orb {
+  position:absolute; border-radius:50%;
+  filter:blur(90px); pointer-events:none;
+}
+.wov-orb-1 {
+  width:600px; height:600px;
+  background:radial-gradient(circle, rgba(37,99,235,.18), transparent 70%);
+  top:-150px; right:-150px;
+  animation:orbDrift 9s ease-in-out infinite;
+}
+.wov-orb-2 {
+  width:500px; height:500px;
+  background:radial-gradient(circle, rgba(245,158,11,.14), transparent 70%);
+  bottom:-150px; left:-150px;
+  animation:orbDrift 11s ease-in-out infinite reverse;
+}
+.wov-orb-3 {
+  width:300px; height:300px;
+  background:radial-gradient(circle, rgba(16,185,129,.08), transparent 70%);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  animation:orbDrift 7s ease-in-out infinite 2s;
+}
+
+/* — floating code particles — */
+.wov-code {
+  position:absolute;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.62rem; font-weight:600;
+  color:rgba(37,99,235,.25);
+  pointer-events:none;
+  animation:codeFloat linear infinite;
+  white-space:nowrap;
+  letter-spacing:.06em;
+}
+
+/* — avatar container — */
+.wov-content {
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; align-items:center;
+  text-align:center;
+  animation:wovIn .9s cubic-bezier(.22,1,.36,1) forwards;
+  opacity:0;
+}
+@keyframes wovIn {
+  from { opacity:0; transform:translateY(30px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* — orbiting rings — */
+.wov-rings {
+  position:relative;
+  width:220px; height:220px;
+  display:grid; place-items:center;
+  margin-bottom:32px;
+}
+.wov-ring {
+  position:absolute; border-radius:50%;
+  border:1px solid transparent;
+}
+.wov-ring-1 {
+  width:220px; height:220px;
+  border-color:rgba(37,99,235,.18);
+  animation:spinRing 10s linear infinite;
+}
+.wov-ring-2 {
+  width:190px; height:190px;
+  border-color:rgba(245,158,11,.15);
+  animation:spinRing 7s linear infinite reverse;
+}
+.wov-ring-3 {
+  width:158px; height:158px;
+  border-color:rgba(37,99,235,.12);
+  animation:spinRing 14s linear infinite;
+}
+@keyframes spinRing { to { transform:rotate(360deg); } }
+
+/* ring dot — orbiting node */
+.wov-ring::after {
+  content:"";
+  position:absolute;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--blue);
+  box-shadow:0 0 12px var(--blue);
+  top:50%; left:-3.5px;
+  transform:translateY(-50%);
+}
+.wov-ring-2::after { background:var(--purple); box-shadow:0 0 12px var(--purple); }
+.wov-ring-3::after { background:var(--neon);   box-shadow:0 0 12px var(--neon); width:5px; height:5px; left:-2.5px; }
+
+/* — main avatar circle — */
+.wov-avatar {
+  width:110px; height:110px; border-radius:50%;
+  background:#0D2260;
+  border:2px solid rgba(37,99,235,.35);
+  box-shadow:
+    0 0 0 6px rgba(37,99,235,.07),
+    0 0 40px rgba(37,99,235,.25),
+    0 20px 50px -15px rgba(0,0,0,.7);
+  display:flex; align-items:center; justify-content:center;
+  position:relative; z-index:2;
+  overflow:hidden;
+  animation:avatarPop .7s cubic-bezier(.34,1.56,.64,1) .4s both;
+}
+@keyframes avatarPop {
+  from { transform:scale(0.5); opacity:0; }
+  to   { transform:scale(1);   opacity:1; }
+}
+
+/* SVG face illustration inside avatar */
+.wov-face { width:78px; height:78px; }
+
+/* — wave hand — */
+.wov-wave {
+  position:absolute; top:-4px; right:-8px; z-index:3;
+  font-size:1.5rem;
+  animation:wave 1.8s ease-in-out infinite .8s;
+  transform-origin:70% 80%;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));
+}
+@keyframes wave {
+  0%,60%,100% { transform:rotate(0deg); }
+  10%,30%     { transform:rotate(22deg); }
+  20%         { transform:rotate(-8deg); }
+  40%         { transform:rotate(16deg); }
+}
+
+/* online dot */
+.wov-online {
+  position:absolute; bottom:6px; right:6px; z-index:3;
+  width:18px; height:18px; border-radius:50%;
+  background:var(--neon);
+  border:2px solid #0b1120;
+  box-shadow:0 0 12px var(--neon);
+  animation:pulse 1.6s infinite;
+}
+
+/* — text area — */
+.wov-eyebrow {
+  font-family:'JetBrains Mono', monospace;
+  font-size:.65rem; font-weight:700;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--blue); margin-bottom:10px;
+  display:flex; align-items:center; gap:8px;
+}
+.wov-eyebrow::before,
+.wov-eyebrow::after {
+  content:""; flex:1; height:1px;
+  background: rgba(27,61,139,.4);
+}
+.wov-eyebrow::after {
+  background: rgba(27,61,139,.4);
+}
+
+.wov-greeting {
+  font-family:'Outfit', sans-serif;
+  font-size:clamp(1.8rem, 4vw, 2.6rem);
+  font-weight:900;
+  letter-spacing:-.035em;
+  line-height:1.1;
+  color:var(--text);
+  margin-bottom:10px;
+  min-height:2.2em;
+}
+.wov-greeting .grad-txt {
+  
+  
+  
+  
+}
+.wov-cursor {
+  display:inline-block; width:3px; height:.85em;
+  background:var(--blue); margin-left:2px;
+  vertical-align:middle;
+  box-shadow:0 0 8px var(--blue);
+  animation:blink 1s infinite;
+}
+
+.wov-sub {
+  font-size:.95rem; color:var(--muted);
+  max-width:460px; line-height:1.68;
+  margin-bottom:32px;
+  opacity:0;
+  animation:wovIn .7s ease .9s forwards;
+}
+
+/* — meta chips row — */
+.wov-chips {
+  display:flex; align-items:center; gap:10px;
+  flex-wrap:wrap; justify-content:center;
+  margin-bottom:36px;
+  opacity:0;
+  animation:wovIn .7s ease 1.1s forwards;
+}
+.wov-chip {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:5px 13px;
+  background:rgba(17,24,39,.8);
+  border:1px solid var(--border2);
+  border-radius:30px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.66rem; font-weight:600;
+  color:var(--muted2); letter-spacing:.06em;
+}
+.wov-chip i { font-size:.75rem; }
+
+/* — progress bar — */
+.wov-progress-wrap {
+  width:260px; margin-bottom:24px;
+  opacity:0;
+  animation:wovIn .6s ease 1.3s forwards;
+}
+.wov-progress-label {
+  display:flex; justify-content:space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.6rem; color:var(--muted);
+  letter-spacing:.1em; margin-bottom:7px;
+}
+.wov-progress-track {
+  height:3px; background:rgba(255,255,255,.06);
+  border-radius:2px; overflow:hidden;
+}
+.wov-progress-fill {
+  height:100%; width:0%;
+  background:var(--grad);
+  border-radius:2px;
+  transition:width linear;
+  box-shadow:0 0 8px rgba(37,99,235,.5);
+}
+
+/* — enter button — */
+.wov-enter {
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--grad);
+  color:#fff; border-radius:50px;
+  padding:14px 32px;
+  font-family:'Outfit', sans-serif;
+  font-size:.95rem; font-weight:700;
+  cursor:pointer; border:none;
+  box-shadow:0 8px 30px -6px rgba(37,99,235,.4);
+  transition:transform .2s, box-shadow .2s, opacity .2s;
+  opacity:0;
+  animation:wovIn .7s ease 1.5s forwards;
+  position:relative; overflow:hidden;
+}
+.wov-enter::after {
+  display: none;
+}
+.wov-enter:hover {
+  transform:translateY(-2px);
+  box-shadow:0 14px 40px -6px rgba(37,99,235,.5);
+}
+.wov-skip {
+  display:block; margin-top:12px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:.63rem; color:var(--muted);
+  letter-spacing:.12em; cursor:pointer; border:none;
+  background:transparent;
+  transition:color .2s;
+  opacity:0;
+  animation:wovIn .6s ease 1.7s forwards;
+}
+.wov-skip:hover { color:var(--blue); }
+
+@media(max-width:600px){
+  .wov-rings  { width:170px; height:170px; }
+  .wov-ring-1 { width:170px; height:170px; }
+  .wov-ring-2 { width:145px; height:145px; }
+  .wov-ring-3 { width:118px; height:118px; }
+  .wov-avatar { width:86px; height:86px; }
+  .wov-face   { width:60px; height:60px; }
+}
+
+@keyframes codeFloat {
+  0%   { transform:translateY(100vh); opacity:0; }
+  8%   { opacity:1; }
+  92%  { opacity:.6; }
+  100% { transform:translateY(-80px); opacity:0; }
+}
+</style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
+<!-- ════════════════════════════════════
+     WELCOME OVERLAY (first-visit avatar)
+     ════════════════════════════════════ -->
+<div id="welcomeOverlay">
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <!-- Ambient orbs -->
+  <div class="wov-orb wov-orb-1"></div>
+  <div class="wov-orb wov-orb-2"></div>
+  <div class="wov-orb wov-orb-3"></div>
 
-<div class="container">
+  <!-- Floating code strings (injected by JS) -->
+  <div id="wovCodeParticles"></div>
 
-<a class="navbar-brand">FR</a>
+  <!-- Main content -->
+  <div class="wov-content" style="animation-delay:.15s">
 
-<button class="navbar-toggler"
-data-bs-toggle="collapse"
-data-bs-target="#nav">
+    <!-- Avatar with rings -->
+    <div class="wov-rings">
+      <div class="wov-ring wov-ring-1"></div>
+      <div class="wov-ring wov-ring-2"></div>
+      <div class="wov-ring wov-ring-3"></div>
 
-<span class="navbar-toggler-icon"></span>
+      <div class="wov-avatar">
+        <!-- Illustrated dev avatar face (pure SVG) -->
+        <svg class="wov-face" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Skin -->
+          <ellipse cx="40" cy="38" rx="22" ry="24" fill="#f5c5a3"/>
+          <!-- Hair -->
+          <path d="M18 30 Q18 10 40 10 Q62 10 62 30 Q62 20 58 16 Q50 6 40 6 Q30 6 22 16 Q18 20 18 30Z" fill="#1a0a00"/>
+          <rect x="18" y="24" width="5" height="14" rx="2.5" fill="#1a0a00"/>
+          <rect x="57" y="24" width="5" height="14" rx="2.5" fill="#1a0a00"/>
+          <!-- Ears -->
+          <ellipse cx="18" cy="39" rx="4" ry="5" fill="#e8a87c"/>
+          <ellipse cx="62" cy="39" rx="4" ry="5" fill="#e8a87c"/>
+          <!-- Eyes -->
+          <ellipse cx="32" cy="36" rx="5" ry="5.5" fill="white"/>
+          <ellipse cx="48" cy="36" rx="5" ry="5.5" fill="white"/>
+          <ellipse cx="33" cy="37" rx="3" ry="3.5" fill="#1a1a2e"/>
+          <ellipse cx="49" cy="37" rx="3" ry="3.5" fill="#1a1a2e"/>
+          <!-- Eye shine -->
+          <circle cx="34" cy="35.5" r="1" fill="white"/>
+          <circle cx="50" cy="35.5" r="1" fill="white"/>
+          <!-- Eyebrows -->
+          <path d="M27 30 Q32 27 37 30" stroke="#1a0a00" stroke-width="2" stroke-linecap="round"/>
+          <path d="M43 30 Q48 27 53 30" stroke="#1a0a00" stroke-width="2" stroke-linecap="round"/>
+          <!-- Nose -->
+          <path d="M38 42 Q40 46 42 42" stroke="#d4956a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <!-- Smile -->
+          <path d="M33 50 Q40 56 47 50" stroke="#c47a5a" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- Cheeks blush -->
+          <ellipse cx="27" cy="46" rx="5" ry="3" fill="rgba(255,150,120,.3)"/>
+          <ellipse cx="53" cy="46" rx="5" ry="3" fill="rgba(255,150,120,.3)"/>
+          <!-- Collar / shirt -->
+          <path d="M22 72 Q25 60 40 62 Q55 60 58 72" fill="#2563eb" opacity=".9"/>
+          <!-- Tie / lanyard -->
+          <path d="M38 62 L40 74 L42 62" fill="#f59e0b" opacity=".8"/>
+        </svg>
 
-</button>
+        <!-- Wave hand -->
+        <span class="wov-wave">👋</span>
+        <!-- Online indicator -->
+        <div class="wov-online"></div>
+      </div>
+    </div><!-- /rings -->
 
-<div class="collapse navbar-collapse" id="nav">
+    <!-- Eyebrow label -->
+    <div class="wov-eyebrow">WELCOME TO FRANCIS.DEV</div>
 
-<ul class="navbar-nav ms-auto">
+    <!-- Typewriter greeting -->
+    <div class="wov-greeting" id="wovGreeting">
+      <span id="wovTyped"></span><span class="wov-cursor"></span>
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="#about">About</a>
-</li>
+    <!-- Sub text -->
+    <p class="wov-sub">
+      I build secure, scalable enterprise web systems for businesses that can't afford to fail.
+      Based in the <strong style="color:var(--text)">Philippines</strong> · Available for new projects.
+    </p>
 
-<li class="nav-item">
-<a class="nav-link" href="#skills">Skills</a>
-</li>
+    <!-- Meta chips -->
+    <div class="wov-chips">
+      <span class="wov-chip"><i class="bi bi-code-slash cc-bl"></i> Full Stack Dev</span>
+      <span class="wov-chip"><i class="bi bi-shield-lock-fill cc-gr"></i> Security-First</span>
+      <span class="wov-chip"><i class="bi bi-bar-chart-fill cc-or"></i> Power BI</span>
+      <span class="wov-chip"><i class="bi bi-geo-alt-fill" style="color:#f59e0b"></i> PH</span>
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="#projects">Projects</a>
-</li>
+    <!-- Auto-progress bar -->
+    <div class="wov-progress-wrap">
+      <div class="wov-progress-label">
+        <span>Loading portfolio</span>
+        <span id="wovPct">0%</span>
+      </div>
+      <div class="wov-progress-track">
+        <div class="wov-progress-fill" id="wovFill"></div>
+      </div>
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="#experience">Experience</a>
-</li>
+    <!-- CTA button -->
+    <button class="wov-enter" id="wovEnter">
+      <i class="bi bi-arrow-right-circle-fill"></i> Enter Portfolio
+    </button>
+    <button class="wov-skip" id="wovSkip">SKIP INTRO</button>
 
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
+  </div><!-- /wov-content -->
+</div><!-- /welcomeOverlay -->
 
-</ul>
 
-</div>
-</div>
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container text-center">
-
-<h1 class="hero-title">
-
-Hi, I'm <span>Francis Rapada</span>
-
-</h1>
-
-<p class="hero-subtitle">
-
-Full Stack Developer building enterprise systems,
-analytics dashboards, and scalable APIs.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#projects" class="btn btn-primary btn-lg">
-
-View Projects
-
-</a>
-
-<a href="resume/francis-rapada-cv.pdf"
-class="btn btn-outline-light btn-lg">
-
-Download CV
-
-</a>
-
-</div>
-
-<div class="hero-social mt-4">
-
-<a href="#"><i class="fab fa-github"></i></a>
-
-<a href="#"><i class="fab fa-linkedin"></i></a>
-
-<a href="#"><i class="fab fa-twitter"></i></a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="py-5">
-
-<div class="container">
-
-<h2 class="section-title text-center">
-
-About Me
-
-</h2>
-
-<div class="row">
-
-<div class="col-md-8 mx-auto text-center">
-
-<p>
-
-I develop scalable enterprise web applications,
-analytics dashboards, and modern APIs using
-Laravel, JavaScript, and MySQL.
-
-</p>
-
+<div class="mob-nav" id="mobNav">
+  <button class="mob-close" id="mobClose"><i class="bi bi-x-lg"></i></button>
+  <a href="#services"     onclick="closeMob()">Services</a>
+  <a href="#experience"   onclick="closeMob()">Experience</a>
+  <a href="#projects"     onclick="closeMob()">Projects</a>
+  <a href="#process"      onclick="closeMob()">Process</a>
+  <a href="#pricing"      onclick="closeMob()">Pricing</a>
+  <a href="#testimonials" onclick="closeMob()">Reviews</a>
+  <a href="#contact"      onclick="closeMob()">Contact</a>
+  <a href="#contact" class="btn-cta mt-3" onclick="closeMob()"><i class="bi bi-send-fill"></i> HIRE ME</a>
 </div>
 
-</div>
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="py-5 bg-light">
-
-<div class="container">
-
-<h2 class="section-title text-center">
-
-Tech Stack
-
-</h2>
-
-<div class="row g-4">
-
-<div class="col-md-3 col-6">
-
-<div class="skill-box">
-
-<i class="fa-brands fa-laravel skill-icon"></i>
-
-<h6>Laravel</h6>
-
-</div>
-
-</div>
-
-<div class="col-md-3 col-6">
-
-<div class="skill-box">
-
-<i class="fa-brands fa-js skill-icon"></i>
-
-<h6>JavaScript</h6>
-
-</div>
-
-</div>
-
-<div class="col-md-3 col-6">
-
-<div class="skill-box">
-
-<i class="fa-brands fa-bootstrap skill-icon"></i>
-
-<h6>Bootstrap</h6>
-
-</div>
-
-</div>
-
-<div class="col-md-3 col-6">
-
-<div class="skill-box">
-
-<i class="fa-solid fa-database skill-icon"></i>
-
-<h6>MySQL</h6>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects" class="py-5">
-
-<div class="container">
-
-<h2 class="section-title text-center">
-
-Projects
-
-</h2>
-
-<div class="row g-4">
-
-<!-- Project -->
-
-<div class="col-md-4">
-
-<div class="card project-card">
-
-<img src="assets/project1.jpg"
-class="project-img card-img-top">
-
-<div class="card-body">
-
-<h5>Fraud Investigation System</h5>
-
-<p>
-
-Enterprise case investigation platform
-with reporting and analytics.
-
-</p>
-
-<div class="project-tech">
-
-<span class="badge bg-primary">Laravel</span>
-
-<span class="badge bg-dark">MySQL</span>
-
-<span class="badge bg-secondary">Bootstrap</span>
-
-</div>
-
-<div class="mt-3">
-
-<a href="#" class="btn btn-sm btn-dark">
-
-<i class="fab fa-github"></i> Code
-
-</a>
-
-<a href="#" class="btn btn-sm btn-primary">
-
-Live Demo
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Project -->
-
-<div class="col-md-4">
-
-<div class="card project-card">
-
-<img src="assets/project2.jpg"
-class="project-img card-img-top">
-
-<div class="card-body">
-
-<h5>Customer Analytics Dashboard</h5>
-
-<p>
-
-Analytics platform used for monitoring
-customer behavior and fraud patterns.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience" class="py-5 bg-light">
-
-<div class="container">
-
-<h2 class="section-title text-center">
-
-Experience
-
-</h2>
-
-<div class="timeline col-md-8 mx-auto">
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<h5>Full Stack Developer</h5>
-
-<p>Enterprise Systems Development</p>
-
-<small>2023 - Present</small>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<h5>Data Analyst</h5>
-
-<p>Business Intelligence</p>
-
-<small>2021 - 2023</small>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- GITHUB STATS -->
-
-<section class="py-5">
-
-<div class="container text-center">
-
-<h2 class="section-title">
-
-GitHub Activity
-
-</h2>
-
-<img
-class="img-fluid"
-src="https://github-readme-stats.vercel.app/api?username=YOURUSERNAME&show_icons=true&theme=dark">
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<div class="container">
-
-<h2 class="text-center mb-4">
-
-Let's Work Together
-
-</h2>
-
-<div class="row justify-content-center">
-
-<div class="col-md-6">
-
-<form>
-
-<input class="form-control mb-3"
-placeholder="Name">
-
-<input class="form-control mb-3"
-placeholder="Email">
-
-<textarea
-class="form-control mb-3"
-rows="4"
-placeholder="Message"></textarea>
-
-<button class="btn btn-primary w-100">
-
-Send Message
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Francis Rapada
-
-</footer>
-
-<!-- COOKIE -->
-
-<div class="cookie-banner" id="cookieBanner">
-
-<span>
-
-This website uses cookies.
-
-</span>
-
-<div>
-
-<button class="btn btn-primary btn-sm"
-onclick="acceptCookies()">
-
-Accept
-
-</button>
-
-<button class="btn btn-outline-light btn-sm"
-onclick="declineCookies()">
-
-Decline
-
-</button>
-
-</div>
-
-</div>
-
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
-
+<!-- ════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════ -->
+<div class="navbar-wrap" id="navbar">
+  <div class="nav-inner">
+
+    <a href="#" class="nav-brand">
+      <div class="brand-icon">F</div>
+      <span class="brand-name grad-txt">Francis.dev</span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="nav-status d-none d-md-flex">
+        <span class="npulse"></span>
+        OPEN_FOR_WORK
+      </div>
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
+        <span class="tt-track">
+          <span class="tt-thumb">
+            <i class="bi bi-moon-stars-fill tt-icon-dark"></i>
+            <i class="bi bi-sun-fill tt-icon-light"></i>
+          </span>
+        </span>
+      </button>
+      <a href="#contact" class="btn-cta d-none d-sm-inline-flex">
+        <i class="bi bi-send-fill"></i> HIRE ME
+      </a>
+      <button class="hamburger" id="hamburger">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
+  </div>
+</div><!-- /navbar -->
+
+
+<!-- ════════════════════════════════════
+     HERO
+     ════════════════════════════════════ -->
+<section class="hero" id="home">
+
+  <!-- BG -->
+  <div class="hero-bg">
+    <div class="h-orb h-orb-1"></div>
+    <div class="h-orb h-orb-2"></div>
+    <svg viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g opacity=".5">
+        <line class="edge" x1="80"   y1="140" x2="280"  y2="220"/>
+        <line class="edge" x1="280"  y1="220" x2="520"  y2="160"/>
+        <line class="edge" x1="520"  y1="160" x2="760"  y2="310"/>
+        <line class="edge" x1="760"  y1="310" x2="980"  y2="190"/>
+        <line class="edge" x1="980"  y1="190" x2="1180" y2="260"/>
+        <line class="edge" x1="1180" y1="260" x2="1340" y2="200"/>
+        <line class="edge" x1="80"   y1="140" x2="220"  y2="420"/>
+        <line class="edge" x1="220"  y1="420" x2="460"  y2="490"/>
+        <line class="edge" x1="460"  y1="490" x2="640"  y2="400"/>
+        <line class="edge" x1="640"  y1="400" x2="860"  y2="450"/>
+        <line class="edge" x1="860"  y1="450" x2="1100" y2="410"/>
+        <line class="edge" x1="1100" y1="410" x2="1320" y2="470"/>
+        <line class="edge" x1="280"  y1="220" x2="220"  y2="420"/>
+        <line class="edge" x1="520"  y1="160" x2="460"  y2="490"/>
+        <line class="edge" x1="760"  y1="310" x2="640"  y2="400"/>
+        <line class="edge" x1="980"  y1="190" x2="860"  y2="450"/>
+        <line class="edge" x1="1180" y1="260" x2="1100" y2="410"/>
+        <circle class="node" cx="80"   cy="140" r="3.5"/>
+        <circle class="node" cx="280"  cy="220" r="4.5"/>
+        <circle class="node" cx="520"  cy="160" r="3.5"/>
+        <circle class="node" cx="760"  cy="310" r="5.5"/>
+        <circle class="node" cx="980"  cy="190" r="3.5"/>
+        <circle class="node" cx="1180" cy="260" r="4.5"/>
+        <circle class="node" cx="1340" cy="200" r="3"/>
+        <circle class="node" cx="220"  cy="420" r="3.5"/>
+        <circle class="node" cx="460"  cy="490" r="4.5"/>
+        <circle class="node" cx="640"  cy="400" r="3.5"/>
+        <circle class="node" cx="860"  cy="450" r="5"/>
+        <circle class="node" cx="1100" cy="410" r="3.5"/>
+        <circle class="node" cx="1320" cy="470" r="4"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-particles" id="heroParticles"></div>
+
+  <!-- HERO CONTENT — two-column grid -->
+  <div class="wrap" style="position:relative;z-index:1;width:100%;">
+    <div class="hero-2col">
+
+      <!-- LEFT: Text -->
+      <div class="hero-text">
+        <div class="avail-badge reveal">
+          <span class="avail-dot"></span>
+          AVAILABLE FOR PROJECTS · PHILIPPINES
+        </div>
+
+        <h1 class="reveal d1">
+          <span class="grad-txt">Building</span><br>
+          enterprise web systems<br>
+          that&nbsp;<span class="morph-wrap"><span class="morph-word" id="morphWord">scale.</span><span class="morph-cursor"></span></span>
+        </h1>
+
+        <p class="hero-lede reveal d2">
+          I help businesses automate operations through secure, scalable, and modern
+          web applications — powered by Laravel, Power BI, and enterprise-grade architecture.
+        </p>
+
+        <div class="hero-ctas reveal d3">
+          <a href="#projects" class="btn-cta">
+            <i class="bi bi-grid-3x3-gap-fill"></i> View Projects
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <i class="bi bi-calendar2-event"></i> Book Discovery Call
+          </a>
+        </div>
+
+        <div class="hero-tag reveal d3">
+          <span class="dot">●</span>&nbsp;
+          Laravel · Power BI · UI/UX Design · Secure REST APIs · Docker
+        </div>
+
+        <div class="hero-metrics reveal d4">
+          <div>
+            <span class="metric-val"><span id="cntProj" class="accent-num">0</span><span class="accent-num">+</span></span>
+            <div class="metric-lbl">Projects Delivered</div>
+          </div>
+          <div>
+            <span class="metric-val"><span id="cntClients" class="accent-num">0</span><span class="accent-num">+</span></span>
+            <div class="metric-lbl">Enterprise Clients</div>
+          </div>
+          <div>
+            <span class="metric-val"><span id="cntYears" class="accent-num">0</span><span class="accent-num">+</span></span>
+            <div class="metric-lbl">Years Experience</div>
+          </div>
+          <div>
+            <span class="metric-val"><span id="cntSat" class="accent-num">0</span><span class="accent-num">%</span></span>
+            <div class="metric-lbl">Client Satisfaction</div>
+          </div>
+        </div>
+      </div><!-- /hero-text -->
+
+      <!-- RIGHT: Developer Photo -->
+      <div class="hero-photo-wrap reveal d2">
+        <!-- Floating badges -->
+        <div class="hphoto-badge hpb-1">
+          <div class="hpb-ico"><i class="bi bi-shield-lock-fill"></i></div>
+          <div><div class="hpb-t">Secure Architecture</div><div class="hpb-s">SSL · 2FA · RBAC</div></div>
+        </div>
+        <div class="hphoto-badge hpb-2">
+          <div class="hpb-ico" style="background:rgba(245,196,0,.1);color:var(--purple)"><i class="bi bi-bar-chart-line-fill"></i></div>
+          <div><div class="hpb-t">Power BI Expert</div><div class="hpb-s">Real-time dashboards</div></div>
+        </div>
+        <div class="hphoto-badge hpb-3">
+          <div class="hpb-ico" style="background:rgba(16,185,129,.1);color:var(--neon)"><i class="bi bi-stars"></i></div>
+          <div><div class="hpb-t">8 Years Experience</div><div class="hpb-s">Enterprise · Full Stack</div></div>
+        </div>
+        <!-- Photo frame -->
+        <div class="hero-photo-frame">
+          <div class="hero-photo-ring hero-photo-ring-1"></div>
+          <div class="hero-photo-ring hero-photo-ring-2"></div>
+          <div class="hero-photo-inner">
+            <!-- Replace src with your actual photo URL -->
+            <img
+              src="https://ui-avatars.com/api/?name=Francis+Paul&size=480&background=1B3D8B&color=F5C400&bold=true&font-size=0.38&length=2"
+              alt="Francis Paul — Full Stack Developer"
+              class="hero-photo-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            />
+            <!-- Fallback avatar if photo fails -->
+            <div class="hero-photo-fallback" style="display:none">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <rect width="200" height="200" fill="#1B3D8B"/>
+                <ellipse cx="100" cy="82" rx="36" ry="38" fill="#F5C400" opacity=".9"/>
+                <ellipse cx="100" cy="82" rx="28" ry="30" fill="#0D2260"/>
+                <ellipse cx="100" cy="78" rx="22" ry="24" fill="#F5C918"/>
+                <ellipse cx="100" cy="170" rx="60" ry="55" fill="#F5C400" opacity=".85"/>
+                <text x="100" y="92" text-anchor="middle" font-family="Outfit,sans-serif" font-weight="900" font-size="28" fill="#0D2260">FP</text>
+              </svg>
+            </div>
+          </div>
+          <!-- Online status -->
+          <div class="hphoto-online">
+            <span class="hphoto-dot"></span> Available for Work
+          </div>
+          <!-- Name card -->
+          <div class="hphoto-namecard">
+            <div class="hphoto-name">Francis Paul Rapada</div>
+            <div class="hphoto-title"><i class="bi bi-geo-alt-fill"></i> Pasig City, Philippines</div>
+          </div>
+        </div>
+      </div><!-- /hero-photo-wrap -->
+
+    </div><!-- /hero-2col -->
+  </div>
+
+</section><!-- /hero -->
+
+
+<!-- ════════════════════════════════════
+     TECH STACK
+     ════════════════════════════════════ -->
+<section class="tech-strip">
+  <div class="wrap">
+    <p class="tech-eyebrow reveal">Trusted Technologies &amp; Stack</p>
+    <div class="tech-chips reveal d1">
+      <!-- Frontend -->
+      <span class="tc"><i class="bi bi-bootstrap-fill cc-pu"></i> Bootstrap 5</span>
+      <span class="tc"><i class="bi bi-filetype-js cc-ye"></i> JavaScript</span>
+      <span class="tc"><i class="bi bi-filetype-html cc-or"></i> HTML5</span>
+      <span class="tc"><i class="bi bi-filetype-css cc-bl"></i> CSS3</span>
+      <span class="tc"><i class="bi bi-braces cc-ye"></i> jQuery</span>
+      <!-- Backend -->
+      <span class="tc"><i class="bi bi-server cc-re"></i> Laravel 12</span>
+      <span class="tc"><i class="bi bi-filetype-php cc-pu"></i> PHP 8</span>
+      <span class="tc"><i class="bi bi-hdd-network cc-bl"></i> REST API</span>
+      <!-- Database -->
+      <span class="tc"><i class="bi bi-database-fill cc-or"></i> MySQL</span>
+      <span class="tc"><i class="bi bi-database-fill-up cc-bl"></i> PostgreSQL</span>
+      <!-- Tools -->
+      <span class="tc"><i class="bi bi-github cc-ye"></i> GitHub</span>
+      <span class="tc"><i class="bi bi-box-seam cc-cy"></i> Docker</span>
+      <span class="tc"><i class="bi bi-bar-chart-fill cc-or"></i> Power BI</span>
+      <span class="tc"><i class="bi bi-pen-fill cc-pi"></i> Figma</span>
+      <span class="tc"><i class="bi bi-cloud-fill cc-bl"></i> Cloud Deploy</span>
+      <span class="tc"><i class="bi bi-filetype-py cc-ye"></i> Python</span>
+      <span class="tc"><i class="bi bi-server cc-or"></i> AWS EC2</span>
+      <span class="tc"><i class="bi bi-database-fill cc-gr"></i> AWS RDS</span>
+      <span class="tc"><i class="bi bi-bucket-fill cc-ye"></i> AWS S3</span>
+    </div>
+  </div>
+</section><!-- /tech -->
+
+
+<!-- ════════════════════════════════════
+     SERVICES
+     ════════════════════════════════════ -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-grid-3x3-gap-fill"></i> Services</span>
+      <h2 class="sec-title reveal d1">What I Build for <span class="grad-txt">Your Business</span></h2>
+      <p class="sec-sub mx-auto reveal d2">Enterprise-grade solutions from architecture to deployment — designed to scale with your operations.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc-card glass reveal">
+        <div class="svc-ico"><i class="bi bi-cpu-fill"></i></div>
+        <div class="svc-title">Business Systems Development</div>
+        <div class="svc-desc">Custom HRIS, CRM, POS integrations, ERP-adjacent systems, and internal tools built specifically around your operational workflows.</div>
+      </div>
+
+      <div class="svc-card glass reveal d1">
+        <div class="svc-ico" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.2);color:var(--purple)"><i class="bi bi-palette2"></i></div>
+        <div class="svc-title">UI/UX Design</div>
+        <div class="svc-desc">Enterprise-grade interface design — wireframes, prototypes, and pixel-perfect Figma to code implementation with a SaaS-inspired aesthetic.</div>
+      </div>
+
+      <div class="svc-card glass reveal d2">
+        <div class="svc-ico" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.2);color:#f59e0b"><i class="bi bi-bar-chart-line-fill"></i></div>
+        <div class="svc-title">Dashboard &amp; Analytics</div>
+        <div class="svc-desc">Power BI dashboards, real-time KPI reporting, custom analytics engines, and executive-level business intelligence visualizations.</div>
+      </div>
+
+      <div class="svc-card glass reveal d3">
+        <div class="svc-ico" style="background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.2);color:var(--neon)"><i class="bi bi-shield-lock-fill"></i></div>
+        <div class="svc-title">Secure Architecture</div>
+        <div class="svc-desc">Multi-layer security design: 2FA, RBAC, audit logging, encrypted data layers, OAuth2, and secure API gateway patterns.</div>
+      </div>
+
+      <div class="svc-card glass reveal d4">
+        <div class="svc-ico" style="background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.2);color:#2563eb"><i class="bi bi-plug-fill"></i></div>
+        <div class="svc-title">API Integration</div>
+        <div class="svc-desc">Third-party and internal REST API integrations — payment gateways, POS systems, government APIs, logistics, and enterprise SaaS platforms.</div>
+      </div>
+
+      <div class="svc-card glass reveal d5">
+        <div class="svc-ico" style="background:rgba(29,78,216,.1);border-color:rgba(29,78,216,.2);color:#1d4ed8"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+        <div class="svc-title">Cloud Deployment</div>
+        <div class="svc-desc">Docker containerization, CI/CD pipelines, server provisioning, SSL, NGINX configuration, and ongoing performance monitoring.</div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /services -->
+
+
+<!-- ════════════════════════════════════
+     WHY HIRE ME
+     ════════════════════════════════════ -->
+<section class="pad" id="why" style="background:linear-gradient(180deg,transparent,rgba(7,17,43,.5),transparent)">
+  <div class="wrap">
+    <div class="mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-star-fill"></i> Why Clients Hire Me</span>
+      <h2 class="sec-title reveal d1">The Advantage of a <span class="grad-txt">True Full Stack Expert</span></h2>
+      <p class="sec-sub reveal d2">Not just a coder — a system thinker who bridges design, engineering, security, and business logic in one engagement.</p>
+    </div>
+    <div class="why-grid">
+
+      <!-- LIST -->
+      <ul class="why-list">
+        <li class="why-row reveal">
+          <div class="why-ico"><i class="bi bi-layers-fill"></i></div>
+          <div class="why-txt">
+            <strong>Full Stack Expertise</strong>
+            <span>End-to-end ownership from database schema to pixel-perfect UI — no miscommunication between frontend and backend.</span>
+          </div>
+        </li>
+        <li class="why-row reveal d1">
+          <div class="why-ico" style="color:var(--purple)"><i class="bi bi-diagram-3-fill"></i></div>
+          <div class="why-txt">
+            <strong>Business Analysis Skills</strong>
+            <span>I model your workflows before writing a line of code, ensuring the system solves the actual business problem.</span>
+          </div>
+        </li>
+        <li class="why-row reveal d2">
+          <div class="why-ico" style="color:var(--neon)"><i class="bi bi-shield-lock-fill"></i></div>
+          <div class="why-txt">
+            <strong>Security Architecture</strong>
+            <span>PCI-DSS awareness, penetration-tested patterns, and enterprise access controls baked in from day one.</span>
+          </div>
+        </li>
+        <li class="why-row reveal d3">
+          <div class="why-ico" style="color:#f59e0b"><i class="bi bi-palette-fill"></i></div>
+          <div class="why-txt">
+            <strong>UI/UX + Backend Combined</strong>
+            <span>No design-developer handoff delays. I design and build simultaneously, delivering polished interfaces faster.</span>
+          </div>
+        </li>
+        <li class="why-row reveal d4">
+          <div class="why-ico" style="color:#2563eb"><i class="bi bi-cloud-check-fill"></i></div>
+          <div class="why-txt">
+            <strong>Deployment Experience</strong>
+            <span>From local dev to production — Docker, CI/CD, cloud servers, domain config, and zero-downtime migrations.</span>
+          </div>
+        </li>
+        <li class="why-row reveal d5">
+          <div class="why-ico" style="color:#1d4ed8"><i class="bi bi-file-earmark-text-fill"></i></div>
+          <div class="why-txt">
+            <strong>Enterprise-Level Documentation</strong>
+            <span>Technical specs, API docs, deployment runbooks, and system architecture diagrams delivered with every project.</span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- VISUAL SIDE -->
+      <div class="why-visual">
+        <!-- Skill bars card -->
+        <div class="wv-main glass">
+          <div class="wv-title">Skill Proficiency</div>
+          <div class="skill-row">
+            <div class="skill-lbl"><span>Laravel / PHP</span><span>96%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="96"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-lbl"><span>UI/UX Design</span><span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-lbl"><span>Database Architecture</span><span>93%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="93"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-lbl"><span>Security Design</span><span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="88"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-lbl"><span>Power BI / Analytics</span><span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-lbl"><span>DevOps / Cloud</span><span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+        </div>
+        <!-- Badge 1 -->
+        <div class="wv-badge wvb-1">
+          <div class="wvb-ico"><i class="bi bi-trophy-fill"></i></div>
+          <div class="wvb-t">
+            <strong>30+ Delivered</strong>
+            <small>Enterprise projects</small>
+          </div>
+        </div>
+        <!-- Badge 2 -->
+        <div class="wv-badge wvb-2">
+          <div class="wvb-ico" style="color:var(--neon);background:rgba(16,185,129,.1)"><i class="bi bi-check-circle-fill"></i></div>
+          <div class="wvb-t">
+            <strong>99% Satisfaction</strong>
+            <small>Verified by clients</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /why -->
+
+
+<!-- ════════════════════════════════════
+     CAREER MILESTONES
+     ════════════════════════════════════ -->
+<section class="pad" id="experience">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-briefcase-fill"></i> Career Milestones</span>
+      <h2 class="sec-title reveal d1">8 Years Building <span class="grad-txt">Enterprise Systems</span></h2>
+      <p class="sec-sub mx-auto reveal d2">From OJT intern to Full Stack Developer — a career built across petroleum, banking, manufacturing, and software industries in the Philippines.</p>
+    </div>
+
+    <div class="career-timeline">
+
+      <!-- ① CURRENT — Full Stack Developer · Unioil -->
+      <div class="ct-item current reveal">
+        <div class="ct-left">
+          <div class="ct-card glass">
+            <div class="ct-period">
+              <i class="bi bi-calendar3"></i> June 2025 – Present
+              <span class="ct-now">CURRENT</span>
+            </div>
+            <div class="ct-role">Full Stack Developer</div>
+            <div class="ct-company"><i class="bi bi-fuel-pump-fill"></i> Unioil Petroleum Philippines · Pasig City</div>
+            <ul class="ct-highlights">
+              <li>Lead development of enterprise systems including <strong>Station Price Capture</strong> and <strong>Truck Profitability Management System</strong></li>
+              <li>Enhanced Unioil corporate website, improving performance and user engagement</li>
+              <li>Delivered employee engagement and delivery monitoring applications, streamlining key business processes</li>
+            </ul>
+            <div class="ct-tags">
+              <span class="tag">Laravel 12</span>
+              <span class="tag p">AWS EC2</span>
+              <span class="tag">AWS RDS</span>
+              <span class="tag p">AWS S3</span>
+              <span class="tag">Docker</span>
+              <span class="tag p">Power BI</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+        </div>
+        <div class="ct-node">
+          <div class="ct-dot"><i class="bi bi-stars"></i></div>
+        </div>
+        <div class="ct-right">
+          <div class="ct-side-note">
+            <div class="ct-snl">PRESENT · ENERGY SECTOR</div>
+            <div class="ct-snt">Full ownership of the product lifecycle.</div>
+            <div class="ct-sns">From Figma prototype to production cloud deployment — building systems that power Unioil's nationwide operations.</div>
+            <div style="margin-top:16px">
+              <a href="#contact" class="btn-cta" style="font-size:.8rem;padding:9px 18px">
+                <i class="bi bi-send-fill"></i> Work With Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ② Senior Programmer · Unioil -->
+      <div class="ct-item flip reveal d1">
+        <div class="ct-left">
+          <div class="ct-side-note" style="text-align:right">
+            <div class="ct-snl">ENERGY SECTOR</div>
+            <div class="ct-snt">Where enterprise scale got real.</div>
+            <div class="ct-sns">Mission-critical systems serving nationwide fuel distribution, facial recognition, and delivery monitoring operations.</div>
+          </div>
+        </div>
+        <div class="ct-node">
+          <div class="ct-dot" style="color:var(--purple)"><i class="bi bi-droplet-fill"></i></div>
+        </div>
+        <div class="ct-right">
+          <div class="ct-card glass">
+            <div class="ct-period" style="color:var(--purple)"><i class="bi bi-calendar3"></i> Sep 2023 – Jun 2025</div>
+            <div class="ct-role">Senior Programmer</div>
+            <div class="ct-company" style="color:var(--purple)"><i class="bi bi-fuel-pump-fill"></i> Unioil Petroleum Philippines · Pasig City</div>
+            <ul class="ct-highlights">
+              <li>Spearheaded <strong>Unified Delivery Monitoring System (UDM)</strong> and <strong>Facial Recognition DTR</strong> integration with Darwinbox</li>
+              <li>Improved operational reporting and monitoring through end-to-end system automation</li>
+            </ul>
+            <div class="ct-tags">
+              <span class="tag p">Laravel</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag p">REST API</span>
+              <span class="tag">Darwinbox</span>
+              <span class="tag p">Power BI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ③ Senior Software Engineer · A.T. Prime -->
+      <div class="ct-item reveal d2">
+        <div class="ct-left">
+          <div class="ct-card glass">
+            <div class="ct-period"><i class="bi bi-calendar3"></i> Jul 2022 – Aug 2023</div>
+            <div class="ct-role">Senior Software Engineer</div>
+            <div class="ct-company"><i class="bi bi-cpu-fill"></i> A.T. Prime Solution Corp. · Pasig City</div>
+            <ul class="ct-highlights">
+              <li>Researched and implemented <strong>Python data analytics</strong> tools for visualization and ML integration</li>
+              <li>Developed <strong>Online Daily Time Record</strong> system, streamlining attendance tracking and payroll accuracy</li>
+              <li>Built <strong>Online Examination platform</strong> for applicant screening, significantly reducing recruitment time</li>
+            </ul>
+            <div class="ct-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag p">Python</span>
+              <span class="tag">MySQL</span>
+              <span class="tag p">ML / Analytics</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+        </div>
+        <div class="ct-node">
+          <div class="ct-dot"><i class="bi bi-code-slash"></i></div>
+        </div>
+        <div class="ct-right">
+          <div class="ct-side-note">
+            <div class="ct-snl">SOFTWARE HOUSE</div>
+            <div class="ct-snt">Where Python entered the stack.</div>
+            <div class="ct-sns">Expanded beyond PHP into data analytics and machine learning while leading multiple product builds simultaneously.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ④ Senior Programmer · Bank of Makati -->
+      <div class="ct-item flip reveal d3">
+        <div class="ct-left">
+          <div class="ct-side-note" style="text-align:right">
+            <div class="ct-snl">BANKING SECTOR</div>
+            <div class="ct-snt">Where security became non-negotiable.</div>
+            <div class="ct-sns">BSP-regulated systems demanded zero-defect code, strict audit trails, and airtight access controls on every deployment.</div>
+          </div>
+        </div>
+        <div class="ct-node">
+          <div class="ct-dot" style="color:var(--purple)"><i class="bi bi-bank2"></i></div>
+        </div>
+        <div class="ct-right">
+          <div class="ct-card glass">
+            <div class="ct-period" style="color:var(--purple)"><i class="bi bi-calendar3"></i> Sep 2020 – Jul 2022</div>
+            <div class="ct-role">Senior Programmer</div>
+            <div class="ct-company" style="color:var(--purple)"><i class="bi bi-bank2"></i> Bank of Makati · Makati City</div>
+            <ul class="ct-highlights">
+              <li>Designed and maintained core banking applications including <strong>Insurance Management System</strong> and <strong>User Access Management (SSO)</strong></li>
+              <li>Ensured compliance with security and audit standards through automated user access monitoring</li>
+              <li>Mentored junior developers and oversaw UAT and production deployments</li>
+            </ul>
+            <div class="ct-tags">
+              <span class="tag p">PHP</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag p">SSO</span>
+              <span class="tag">Audit Logs</span>
+              <span class="tag p">RBAC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⑤ Jr. System Analyst / Programmer · Philsteel -->
+      <div class="ct-item reveal d4">
+        <div class="ct-left">
+          <div class="ct-card glass">
+            <div class="ct-period"><i class="bi bi-calendar3"></i> Nov 2017 – Feb 2020</div>
+            <div class="ct-role">Junior System Analyst / Programmer</div>
+            <div class="ct-company"><i class="bi bi-building"></i> Philsteel Holdings Corp. · Makati City</div>
+            <ul class="ct-highlights">
+              <li>Developed and maintained <strong>Enterprise Application System (EAS)</strong> covering HR, Payroll, Accounting, Sales, and Inventory</li>
+              <li>Acted as <strong>OIC IT Supervisor</strong>, leading both development and IT support teams</li>
+              <li>Improved database management processes — backup, restore, and query optimization</li>
+            </ul>
+            <div class="ct-tags">
+              <span class="tag">PHP</span>
+              <span class="tag p">MySQL</span>
+              <span class="tag">ERP</span>
+              <span class="tag p">HR Systems</span>
+              <span class="tag">IT Leadership</span>
+            </div>
+          </div>
+        </div>
+        <div class="ct-node">
+          <div class="ct-dot"><i class="bi bi-gear-wide-connected"></i></div>
+        </div>
+        <div class="ct-right">
+          <div class="ct-side-note">
+            <div class="ct-snl">MANUFACTURING SECTOR</div>
+            <div class="ct-snt">Where it all began.</div>
+            <div class="ct-sns">First exposure to enterprise-scale systems — spanning HR, payroll, accounting, and inventory — while stepping up into a leadership role.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⑥ Intern · JG Summit -->
+      <div class="ct-item flip reveal d5">
+        <div class="ct-left">
+          <div class="ct-side-note" style="text-align:right">
+            <div class="ct-snl">OJT INTERNSHIP</div>
+            <div class="ct-snt">First line of real code.</div>
+            <div class="ct-sns">Built a fully functional IT assets inventory system from scratch — the moment that confirmed this was the right path.</div>
+          </div>
+        </div>
+        <div class="ct-node">
+          <div class="ct-dot" style="border-color:var(--border2);color:var(--muted)"><i class="bi bi-mortarboard-fill"></i></div>
+        </div>
+        <div class="ct-right">
+          <div class="ct-card glass">
+            <div class="ct-period"><i class="bi bi-calendar3"></i> Nov 2016 – Feb 2017</div>
+            <div class="ct-role">Intern (OJT)</div>
+            <div class="ct-company"><i class="bi bi-building"></i> JG Summit Petrochemical Corp. · Mandaluyong City</div>
+            <ul class="ct-highlights">
+              <li>Built an <strong>IT Assets Inventory System</strong> using Java SE and MySQL for the IT department</li>
+            </ul>
+            <div class="ct-tags">
+              <span class="tag">Java SE</span>
+              <span class="tag p">MySQL</span>
+              <span class="tag">IT Assets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /career-timeline -->
+
+    <!-- ── EDUCATION CARD ── -->
+    <div class="edu-card reveal" style="margin-top:48px">
+      <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+      <div class="edu-body">
+        <div class="edu-label">Education</div>
+        <div class="edu-degree">Bachelor of Science in Information Technology</div>
+        <div class="edu-school"><i class="bi bi-building-fill"></i> Eastern Samar State University</div>
+      </div>
+      <div class="edu-badge"><i class="bi bi-patch-check-fill"></i> Graduate</div>
+    </div>
+
+  </div>
+</section><!-- /experience -->
+
+
+<!-- ════════════════════════════════════
+     PROJECTS
+     ════════════════════════════════════ -->
+<section class="pad" id="projects">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-folder-fill"></i> Featured Projects</span>
+      <h2 class="sec-title reveal d1">Systems I've <span class="grad-txt">Built &amp; Deployed</span></h2>
+      <p class="sec-sub mx-auto reveal d2">Real enterprise platforms used daily by businesses across the Philippines.</p>
+    </div>
+    <div class="projects-grid">
+
+      <!-- 1 -->
+      <div class="proj-card reveal">
+        <div class="proj-mock">
+          <div class="pm-bg"><i class="bi bi-people-fill"></i></div>
+          <div class="pm-content">
+            <div class="pm-bar"></div><div class="pm-bar b2"></div>
+            <div class="pm-row"><div class="pm-col"></div><div class="pm-col"></div><div class="pm-col"></div></div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-ov-btn"><i class="bi bi-arrow-up-right-square"></i> View Case Study</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-industry">HR Technology</div>
+          <div class="proj-title">HRIS Platform</div>
+          <div class="proj-desc">Full-featured Human Resource Information System with biometric time-log integration, payroll automation, employee self-service portal, and engagement modules.</div>
+          <div class="proj-tags">
+            <span class="tag">Laravel</span><span class="tag">MySQL</span>
+            <span class="tag p">Power BI</span><span class="tag">REST API</span><span class="tag p">Vue.js</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="proj-card reveal d1">
+        <div class="proj-mock">
+          <div class="pm-bg"><i class="bi bi-shield-exclamation"></i></div>
+          <div class="pm-content">
+            <div class="pm-bar" style="background:rgba(245,158,11,.25)"></div>
+            <div class="pm-bar b2" style="background:rgba(245,158,11,.2)"></div>
+            <div class="pm-row"><div class="pm-col"></div><div class="pm-col"></div></div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-ov-btn"><i class="bi bi-arrow-up-right-square"></i> View Case Study</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-industry">FinTech · Compliance</div>
+          <div class="proj-title">Suspicious Fraud Detection System</div>
+          <div class="proj-desc">Real-time transaction monitoring engine that flags anomalous patterns using rule-based scoring, risk tiering, and automated alert escalation workflows.</div>
+          <div class="proj-tags">
+            <span class="tag">Laravel</span><span class="tag">PostgreSQL</span>
+            <span class="tag p">Security</span><span class="tag">Queues</span><span class="tag p">Audit Logs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="proj-card reveal d2">
+        <div class="proj-mock">
+          <div class="pm-bg"><i class="bi bi-receipt-cutoff"></i></div>
+          <div class="pm-content">
+            <div class="pm-bar" style="background:rgba(37,99,235,.25)"></div>
+            <div class="pm-bar b2"></div>
+            <div class="pm-row"><div class="pm-col"></div><div class="pm-col"></div><div class="pm-col"></div></div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-ov-btn"><i class="bi bi-arrow-up-right-square"></i> View Case Study</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-industry">Retail · POS Integration</div>
+          <div class="proj-title">Fraud Investigation via POS API</div>
+          <div class="proj-desc">Investigation module integrated directly with POS transaction streams via REST API — surfaces suspicious receipts, cashier patterns, and override abuse in real-time.</div>
+          <div class="proj-tags">
+            <span class="tag">REST API</span><span class="tag">Laravel</span>
+            <span class="tag p">POS Bridge</span><span class="tag">2FA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="proj-card reveal d3">
+        <div class="proj-mock">
+          <div class="pm-bg"><i class="bi bi-house-fill"></i></div>
+          <div class="pm-content">
+            <div class="pm-bar" style="background:rgba(245,158,11,.25)"></div>
+            <div class="pm-bar b2 b3"></div>
+            <div class="pm-row"><div class="pm-col"></div><div class="pm-col"></div></div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-ov-btn"><i class="bi bi-arrow-up-right-square"></i> View Case Study</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-industry">Real Estate</div>
+          <div class="proj-title">Property Management System</div>
+          <div class="proj-desc">End-to-end platform for managing residential and commercial properties — lease tracking, tenant portals, maintenance ticketing, billing, and occupancy analytics.</div>
+          <div class="proj-tags">
+            <span class="tag">Laravel</span><span class="tag p">Figma</span>
+            <span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="proj-card reveal">
+        <div class="proj-mock">
+          <div class="pm-bg"><i class="bi bi-box-seam-fill"></i></div>
+          <div class="pm-content">
+            <div class="pm-bar"></div><div class="pm-bar b2"></div>
+            <div class="pm-row"><div class="pm-col"></div><div class="pm-col"></div><div class="pm-col"></div></div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-ov-btn"><i class="bi bi-arrow-up-right-square"></i> View Case Study</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-industry">Logistics · Operations</div>
+          <div class="proj-title">Inventory &amp; Unified Delivery System</div>
+          <div class="proj-desc">Multi-warehouse inventory management fused with a delivery orchestration engine — real-time stock sync, driver tracking, and route optimization dashboards.</div>
+          <div class="proj-tags">
+            <span class="tag">Laravel</span><span class="tag p">Docker</span>
+            <span class="tag">MySQL</span><span class="tag">API</span><span class="tag p">Power BI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="proj-card reveal d1">
+        <div class="proj-mock">
+          <div class="pm-bg"><i class="bi bi-truck-front-fill"></i></div>
+          <div class="pm-content">
+            <div class="pm-bar" style="background:rgba(245,158,11,.25)"></div>
+            <div class="pm-bar b2 b3" style="background:rgba(37,99,235,.2)"></div>
+            <div class="pm-row"><div class="pm-col"></div><div class="pm-col"></div></div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-ov-btn"><i class="bi bi-arrow-up-right-square"></i> View Case Study</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-industry">Transport · Finance</div>
+          <div class="proj-title">Truck Profitability &amp; CRM Platform</div>
+          <div class="proj-desc">Per-truck revenue and cost tracking system with driver management, fuel consumption analytics, client CRM, and automated P&amp;L reporting for fleet operators.</div>
+          <div class="proj-tags">
+            <span class="tag">Laravel</span><span class="tag p">Power BI</span>
+            <span class="tag">PostgreSQL</span><span class="tag p">CRM</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section><!-- /projects -->
+
+
+<!-- ════════════════════════════════════
+     PROCESS
+     ════════════════════════════════════ -->
+<section class="pad" id="process" style="background:linear-gradient(180deg,transparent,rgba(7,17,43,.55),transparent)">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-diagram-3-fill"></i> Development Process</span>
+      <h2 class="sec-title reveal d1">How I Deliver <span class="grad-txt">Zero-Surprise Projects</span></h2>
+      <p class="sec-sub mx-auto reveal d2">A proven, agile-driven process that keeps you informed at every stage — from first call to live deployment.</p>
+    </div>
+    <div class="process-wrap">
+      <div class="process-line">
+
+        <div class="proc-item reveal">
+          <div class="proc-num">01</div>
+          <div class="proc-box">
+            <div class="proc-title"><i class="bi bi-search me-2 text-primary"></i>Discovery &amp; Analysis</div>
+            <div class="proc-desc">Deep-dive into your business workflows, pain points, and goals. I map current processes, identify automation opportunities, and produce a requirements document before any code is written.</div>
+          </div>
+        </div>
+
+        <div class="proc-item reveal d1">
+          <div class="proc-num">02</div>
+          <div class="proc-box">
+            <div class="proc-title"><i class="bi bi-pen-fill me-2" style="color:var(--purple)"></i>UI/UX Wireframing</div>
+            <div class="proc-desc">High-fidelity Figma prototypes with full user journeys, information architecture, and design system components. You approve the look before development begins.</div>
+          </div>
+        </div>
+
+        <div class="proc-item reveal d2">
+          <div class="proc-num">03</div>
+          <div class="proc-box">
+            <div class="proc-title"><i class="bi bi-code-slash me-2 text-primary"></i>Agile Development</div>
+            <div class="proc-desc">Sprint-based development with weekly demos and a private staging environment. You see real progress every week — not just a final reveal after months of silence.</div>
+          </div>
+        </div>
+
+        <div class="proc-item reveal d3">
+          <div class="proc-num">04</div>
+          <div class="proc-box">
+            <div class="proc-title"><i class="bi bi-bug-fill me-2" style="color:#f59e0b"></i>Testing &amp; QA</div>
+            <div class="proc-desc">Unit tests, integration tests, UAT cycles with your team, performance benchmarking, security audits, and cross-browser/device validation before sign-off.</div>
+          </div>
+        </div>
+
+        <div class="proc-item reveal d4">
+          <div class="proc-num">05</div>
+          <div class="proc-box">
+            <div class="proc-title"><i class="bi bi-cloud-arrow-up-fill me-2" style="color:var(--neon)"></i>Deployment</div>
+            <div class="proc-desc">Zero-downtime production deployment with Docker, CI/CD, SSL configuration, server hardening, backups, and a post-launch monitoring period included.</div>
+          </div>
+        </div>
+
+        <div class="proc-item reveal d5">
+          <div class="proc-num">06</div>
+          <div class="proc-box">
+            <div class="proc-title"><i class="bi bi-headset me-2" style="color:#1d4ed8"></i>Maintenance &amp; Support</div>
+            <div class="proc-desc">Ongoing support retainers available post-launch — bug fixes, feature iterations, performance tuning, security patches, and database optimization.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section><!-- /process -->
+
+
+<!-- ════════════════════════════════════
+     PRICING
+     ════════════════════════════════════ -->
+<section class="pad" id="pricing">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-tag-fill"></i> Pricing</span>
+      <h2 class="sec-title reveal d1">Transparent <span class="grad-txt">Project Pricing</span></h2>
+      <p class="sec-sub mx-auto reveal d2">No hidden fees. Fixed-scope or retainer — you choose what works for your business.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="plan-card reveal">
+        <div class="plan-tier">Starter</div>
+        <div class="plan-price"><sup>₱</sup>65K</div>
+        <div class="plan-note">One-time · Ideal for growing SMEs</div>
+        <div class="plan-div"></div>
+        <ul class="plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Responsive Web Application</li>
+          <li><i class="bi bi-check-circle-fill"></i> User Authentication &amp; Roles</li>
+          <li><i class="bi bi-check-circle-fill"></i> Admin Dashboard UI</li>
+          <li><i class="bi bi-check-circle-fill"></i> Basic Reports &amp; Exports</li>
+          <li><i class="bi bi-check-circle-fill"></i> MySQL Database Design</li>
+          <li><i class="bi bi-check-circle-fill"></i> 30-Day Post-Launch Support</li>
+        </ul>
+        <a href="#contact" class="btn-ghost w-100 justify-content-center">Get Started</a>
+      </div>
+
+      <!-- BUSINESS — FEATURED -->
+      <div class="plan-card hot reveal d1">
+        <div class="plan-badge">MOST POPULAR</div>
+        <div class="plan-tier">Business</div>
+        <div class="plan-price"><sup>₱</sup>150K</div>
+        <div class="plan-note">One-time · Ideal for established businesses</div>
+        <div class="plan-div"></div>
+        <ul class="plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Multi-Role System &amp; RBAC</li>
+          <li><i class="bi bi-check-circle-fill"></i> Advanced Reporting &amp; Filters</li>
+          <li><i class="bi bi-check-circle-fill"></i> Full Audit Log Trail</li>
+          <li><i class="bi bi-check-circle-fill"></i> Approval Workflow Engine</li>
+          <li><i class="bi bi-check-circle-fill"></i> REST API Endpoints</li>
+          <li><i class="bi bi-check-circle-fill"></i> Figma Prototype Included</li>
+          <li><i class="bi bi-check-circle-fill"></i> 60-Day Post-Launch Support</li>
+        </ul>
+        <a href="#contact" class="btn-cta w-100 justify-content-center">Start This Plan</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="plan-card reveal d2">
+        <div class="plan-tier">Enterprise</div>
+        <div class="plan-price"><sup>₱</sup>350K<span style="font-size:1.2rem">+</span></div>
+        <div class="plan-note">Custom scope · For large-scale operations</div>
+        <div class="plan-div"></div>
+        <ul class="plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Third-Party API Integrations</li>
+          <li><i class="bi bi-check-circle-fill"></i> Power BI Dashboards</li>
+          <li><i class="bi bi-check-circle-fill"></i> Security Architecture (2FA/MFA)</li>
+          <li><i class="bi bi-check-circle-fill"></i> Scalable Cloud Infrastructure</li>
+          <li><i class="bi bi-check-circle-fill"></i> Docker + CI/CD Deployment</li>
+          <li><i class="bi bi-check-circle-fill"></i> Full Technical Documentation</li>
+          <li><i class="bi bi-check-circle-fill"></i> 90-Day Post-Launch Support</li>
+        </ul>
+        <a href="#contact" class="btn-ghost w-100 justify-content-center">Let's Talk Scope</a>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /pricing -->
+
+
+<!-- ════════════════════════════════════
+     TESTIMONIALS
+     ════════════════════════════════════ -->
+<section class="pad" id="testimonials" style="background:linear-gradient(180deg,transparent,rgba(7,17,43,.5),transparent)">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-chat-quote-fill"></i> Client Reviews</span>
+      <h2 class="sec-title reveal d1">What <span class="grad-txt">Clients Say</span></h2>
+      <p class="sec-sub mx-auto reveal d2">Feedback from businesses that trusted me with their most critical systems.</p>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <div class="testi-txt">"Francis delivered our HRIS in exactly the timeline promised. The interface is beautifully clean and the biometric integration worked flawlessly. Our HR team can't imagine going back to spreadsheets."</div>
+        <div class="testi-author">
+          <div class="t-avatar">MR</div>
+          <div>
+            <div class="t-name">Maria Reyes</div>
+            <div class="t-pos">HR Director · Manufacturing Corp</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal d1">
+        <div class="stars">★★★★★</div>
+        <div class="testi-txt">"The fraud detection system he built has already flagged over ₱2M in suspicious transactions in its first quarter. The alerting and investigation workflow is exactly what our compliance team needed."</div>
+        <div class="testi-author">
+          <div class="t-avatar" style="background:#1B3D8B">JL</div>
+          <div>
+            <div class="t-name">Jonathan Lim</div>
+            <div class="t-pos">VP Operations · FinTech Startup</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal d2">
+        <div class="stars">★★★★★</div>
+        <div class="testi-txt">"Our property management platform replaced three separate tools we were paying for. Francis understood the full business context, not just the technical requirements. He's genuinely rare."</div>
+        <div class="testi-author">
+          <div class="t-avatar" style="background:#1B3D8B">AC</div>
+          <div>
+            <div class="t-name">Angela Cruz</div>
+            <div class="t-pos">CEO · Real Estate Group</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /testimonials -->
+
+
+<!-- ════════════════════════════════════
+     FAQ
+     ════════════════════════════════════ -->
+<section class="pad" id="faq">
+  <div class="wrap">
+    <div class="text-center mb-5">
+      <span class="eyebrow-pill reveal"><i class="bi bi-question-circle-fill"></i> FAQ</span>
+      <h2 class="sec-title reveal d1">Common <span class="grad-txt">Questions</span></h2>
+    </div>
+    <div class="faq-wrap">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          How long does development typically take?
+          <span class="faq-chev"><i class="bi bi-chevron-down"></i></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-ai">Project timelines depend on scope. Starter projects typically take 4–6 weeks. Business tier averages 8–12 weeks. Enterprise engagements are scoped individually, but I target 3–5 months for complex multi-module systems. You'll receive a detailed timeline in the project proposal after our discovery call.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What technologies do you use?
+          <span class="faq-chev"><i class="bi bi-chevron-down"></i></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-ai">My core stack is Laravel 12 (PHP 8), MySQL/PostgreSQL, Bootstrap 5, jQuery/JavaScript, and REST APIs. For dashboards I use Power BI. For design I use Figma. Deployment is Docker + NGINX on cloud VPS. I choose tools based on your operational context — not personal preference.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you provide post-launch maintenance?
+          <span class="faq-chev"><i class="bi bi-chevron-down"></i></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-ai">Yes. Every project includes a support period (30/60/90 days depending on tier). After that, I offer ongoing maintenance retainers covering bug fixes, minor feature enhancements, security patches, and database optimization. Rates and terms are agreed before launch.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Can you redesign or migrate an existing system?
+          <span class="faq-chev"><i class="bi bi-chevron-down"></i></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-ai">Absolutely — system modernization is a core offering. I can assess your legacy system, extract the business logic, redesign the UI/UX, rebuild on a modern stack, and migrate your data — all with minimal disruption to live operations. I've done this for multiple clients moving from Excel-based or outdated PHP systems.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you support cloud deployment and DevOps setup?
+          <span class="faq-chev"><i class="bi bi-chevron-down"></i></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-ai">Yes. I handle full production deployment: server provisioning (DigitalOcean, AWS, Vultr), Docker containerization, NGINX configuration, SSL setup, automated backups, and CI/CD pipeline configuration. You receive a deployment runbook with every project.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          How do you handle project communication?
+          <span class="faq-chev"><i class="bi bi-chevron-down"></i></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-ai">I use a combination of weekly video calls, a shared project board (Notion or Trello), a private staging link so you can review progress at any time, and a dedicated communication channel (Slack or Viber). I believe in radical transparency — no surprises, no scope creep, no missed deadlines without early notification.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /faq -->
+
+
+<!-- ════════════════════════════════════
+     CONTACT
+     ════════════════════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div class="contact-grid">
+
+        <!-- LEFT -->
+        <div>
+          <span class="eyebrow-pill reveal"><i class="bi bi-send-fill"></i> Contact</span>
+          <h2 class="contact-h reveal d1">
+            Let's Build Your<br><span class="grad-txt">Next Enterprise System</span>
+          </h2>
+          <p class="contact-sub reveal d2">
+            Tell me about your project. I'll respond within 24 hours with an initial assessment and availability.
+          </p>
+          <div class="contact-links reveal d3">
+            <a href="mailto:fpdrapada@gmail.com" class="c-link">
+              <div class="c-ico"><i class="bi bi-envelope-fill"></i></div>
+              fpdrapada@gmail.com
+            </a>
+            <a href="tel:+639XXXXXXXXX" class="c-link">
+              <div class="c-ico"><i class="bi bi-telephone-fill"></i></div>
+              +63 9XX XXX XXXX
+            </a>
+            <a href="https://www.linkedin.com/in/fpdrapada/" target="_blank" class="c-link">
+              <div class="c-ico" style="color:var(--purple);background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.15)"><i class="bi bi-linkedin"></i></div>
+              linkedin.com/in/fpdrapada
+            </a>
+            <a href="https://github.com/francisrapada" target="_blank" class="c-link">
+              <div class="c-ico" style="color:var(--muted2);background:rgba(255,255,255,.05);border-color:var(--border2)"><i class="bi bi-github"></i></div>
+              github.com/francisrapada
+            </a>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="reveal d2">
+          <div class="form-row">
+            <label class="form-lbl">Full Name</label>
+            <input type="text" class="form-inp" placeholder="Juan dela Cruz">
+          </div>
+          <div class="form-row">
+            <label class="form-lbl">Company / Organization</label>
+            <input type="text" class="form-inp" placeholder="ACME Corp Philippines">
+          </div>
+          <div class="form-row">
+            <label class="form-lbl">Email Address</label>
+            <input type="email" class="form-inp" placeholder="juan@company.com.ph">
+          </div>
+          <div class="form-row">
+            <label class="form-lbl">Project Budget Range</label>
+            <select class="form-inp" style="cursor:pointer">
+              <option value="">Select a range...</option>
+              <option>₱65K – ₱150K (Starter / Business)</option>
+              <option>₱150K – ₱350K (Business / Enterprise)</option>
+              <option>₱350K+ (Full Enterprise)</option>
+              <option>Let's discuss (Custom scope)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label class="form-lbl">Tell Me About Your Project</label>
+            <textarea class="form-inp" placeholder="Describe what you need — the business problem, key features, any existing systems I'd need to integrate with..."></textarea>
+          </div>
+          <button class="btn-cta w-100 justify-content-center" id="sendBtn">
+            <i class="bi bi-send-fill"></i> Send Message
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section><!-- /contact -->
+
+
+<!-- ════════════════════════════════════
+     FINAL CTA BAND
+     ════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <div class="cta-glyph tl">[ FRANCIS.DEV ]</div>
+      <div class="cta-glyph tr">// READY</div>
+      <div class="cta-glyph bl">v4.0.0</div>
+      <div class="cta-glyph br">PHILIPPINES · 2026</div>
+      <h2 class="cta-h">Ready to build your next <span class="accent">enterprise system?</span></h2>
+      <p class="cta-p">Launch secure, scalable business platforms with a Laravel developer who understands operations, not just code.</p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn-cta">
+          <i class="bi bi-send-fill"></i> Start a Project
+        </a>
+        <a href="#pricing" class="btn-ghost">
+          <i class="bi bi-tag-fill"></i> View Pricing
+        </a>
+      </div>
+    </div>
+  </div>
+</section><!-- /cta -->
+
+
+<!-- ════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+
+    <div class="footer-top">
+      <!-- Brand -->
+      <div>
+        <div class="nav-brand">
+          <div class="brand-icon" style="width:36px;height:36px;font-size:1rem">F</div>
+          <span class="brand-name grad-txt">Francis.dev</span>
+        </div>
+        <p class="footer-brand-desc">Full Stack Developer specializing in Laravel enterprise systems, Power BI dashboards, secure architecture, and UI/UX design. Based in the Philippines.</p>
+      </div>
+      <!-- Services -->
+      <div>
+        <div class="footer-col-h">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Business Systems</a></li>
+          <li><a href="#services">UI/UX Design</a></li>
+          <li><a href="#services">Analytics Dashboards</a></li>
+          <li><a href="#services">Secure Architecture</a></li>
+          <li><a href="#services">API Integration</a></li>
+          <li><a href="#services">Cloud Deployment</a></li>
+        </ul>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <div class="footer-col-h">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Tech -->
+      <div>
+        <div class="footer-col-h">Stack</div>
+        <ul class="footer-links">
+          <li><a href="#">Laravel 12 / PHP 8</a></li>
+          <li><a href="#">MySQL · PostgreSQL</a></li>
+          <li><a href="#">Bootstrap · jQuery</a></li>
+          <li><a href="#">Power BI · Figma</a></li>
+          <li><a href="#">Docker · GitHub</a></li>
+          <li><a href="#">Cloud · REST APIs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <span class="sys-ok me-3">ENTERPRISE READY</span>
+        © 2026 Francis Paul Rapada · Francis.dev · All rights reserved.
+      </div>
+      <div class="soc-strip">
+        <a href="#" class="soc-ico"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="soc-ico"><i class="bi bi-github"></i></a>
+        <a href="#" class="soc-ico"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="soc-ico"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer><!-- /footer -->
+
+
+<!-- ════════════════════════════════════
+     INLINE STYLES: neural net nodes/edges
+     ════════════════════════════════════ -->
+<style>
+.node {
+  fill: var(--blue);
+  filter: drop-shadow(0 0 6px rgba(37,99,235,.55));
+  animation: nodeFlicker 3.5s infinite;
+}
+.node:nth-child(2n) { fill:#f59e0b;filter:drop-shadow(0 0 6px rgba(245,158,11,.5));animation-delay:.5s; }
+.node:nth-child(3n) { fill:#f59e0b;filter:drop-shadow(0 0 5px rgba(245,158,11,.45));animation-delay:1s; }
+.node:nth-child(5n) { fill:#2563eb;animation-delay:1.5s; }
+@keyframes nodeFlicker { 0%,100%{opacity:.35} 50%{opacity:1} }
+.edge {
+  stroke:rgba(37,99,235,.22); stroke-width:1;
+  animation: edgePulse 4.5s infinite;
+}
+.edge:nth-child(odd)  { animation-delay:.5s; }
+.edge:nth-child(3n)   { animation-delay:1.5s; stroke:rgba(245,158,11,.18); }
+@keyframes edgePulse { 0%,100%{stroke-opacity:.1} 50%{stroke-opacity:.55} }
+</style>
+
+
+<!-- ════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+
+  /* ── Particles ─────────────────────────────────────── */
+  const $pp = $('#heroParticles');
+  for(let i = 0; i < 30; i++){
+    const colors = ['#2563eb','#f59e0b','#1d4ed8','#fbbf24'];
+    const c = colors[Math.floor(Math.random()*colors.length)];
+    $pp.append(`<div class="hp" style="
+      left:${Math.random()*100}%;
+      background:${c};
+      box-shadow:0 0 6px ${c};
+      animation-delay:${Math.random()*18}s;
+      animation-duration:${14 + Math.random()*14}s;
+    "></div>`);
+  }
+
+  /* ── Navbar scroll ──────────────────────────────────── */
+  $(window).on('scroll.nav', function(){
+    if($(this).scrollTop() > 40){
+      $('#navbar').addClass('stuck');
+    } else {
+      $('#navbar').removeClass('stuck');
+    }
+  });
+
+  /* ── Mobile nav ─────────────────────────────────────── */
+  $('#hamburger').on('click', function(){ $('#mobNav').addClass('open'); });
+  $('#mobClose').on('click', function(){ $('#mobNav').removeClass('open'); });
+  window.closeMob = function(){ $('#mobNav').removeClass('open'); };
+
+  /* ── THEME TOGGLE ───────────────────────────────────── */
+  (function(){
+    // Read saved preference, default to dark
+    const saved = localStorage.getItem('fdev_theme') || 'dark';
+    applyTheme(saved, false);
+
+    $('#themeToggle').on('click', function(){
+      const current = $('html').attr('data-theme') === 'light' ? 'light' : 'dark';
+      const next    = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next, true);
+      localStorage.setItem('fdev_theme', next);
+    });
+
+    function applyTheme(theme, animate){
+      if(animate){
+        // Brief flash effect on switch
+        $('body').css('transition','background-color .4s ease, color .3s ease');
+      }
+      $('html').attr('data-theme', theme);
+    }
+  })();
+
+  /* ── Hero typewriter ────────────────────────────────── */
+  (function(){
+    const words   = ['scale.','automate.','secure.','perform.','grow.','impress.'];
+    const TYPE_SPD  = 95;   // ms per character typed
+    const ERASE_SPD = 48;   // ms per character erased
+    const PAUSE_END = 1800; // ms pause after fully typed
+    const PAUSE_START = 320; // ms pause before typing next word
+
+    let wi    = 0;
+    let ci    = 0;
+    let phase = 'typing'; // 'typing' | 'pausing' | 'erasing' | 'waiting'
+    const $el = $('#morphWord');
+
+    function tick(){
+      const word = words[wi];
+
+      if(phase === 'typing'){
+        ci++;
+        $el.text(word.slice(0, ci));
+        if(ci >= word.length){
+          phase = 'pausing';
+          setTimeout(tick, PAUSE_END);
+        } else {
+          // Slight randomness makes it feel human
+          setTimeout(tick, TYPE_SPD + (Math.random() * 40 - 20));
+        }
+
+      } else if(phase === 'pausing'){
+        phase = 'erasing';
+        setTimeout(tick, ERASE_SPD);
+
+      } else if(phase === 'erasing'){
+        if(ci > 0){
+          ci--;
+          $el.text(word.slice(0, ci));
+          setTimeout(tick, ERASE_SPD + (Math.random() * 20 - 10));
+        } else {
+          wi    = (wi + 1) % words.length;
+          phase = 'waiting';
+          setTimeout(tick, PAUSE_START);
+        }
+
+      } else if(phase === 'waiting'){
+        phase = 'typing';
+        setTimeout(tick, TYPE_SPD);
+      }
+    }
+
+    // Erase the initial static word, then start the loop
+    $el.text(words[0]);
+    ci    = words[0].length;
+    phase = 'pausing';
+    setTimeout(tick, PAUSE_END);
+  })();
+
+  /* ── Count-up ───────────────────────────────────────── */
+  function countUp(id, target, duration, suffix){
+    let start = 0;
+    const step = Math.ceil(duration / target);
+    const t = setInterval(function(){
+      start++;
+      $('#' + id).text(start + (suffix||''));
+      if(start >= target) clearInterval(t);
+    }, step);
+  }
+  // Run on hero visible
+  let counted = false;
+  function checkCount(){
+    if(counted) return;
+    if($('.hero-metrics').length){
+      const top = $('.hero-metrics').offset().top;
+      if($(window).scrollTop() + $(window).height() > top - 100){
+        counted = true;
+        countUp('cntProj',    30, 1200);
+        countUp('cntClients', 15,  900);
+        countUp('cntYears',    5,  600);
+        countUp('cntSat',     99, 1400);
+      }
+    }
+  }
+  $(window).on('scroll.count', checkCount);
+  // Trigger immediately if hero is already in view
+  setTimeout(checkCount, 300);
+
+  /* ── Reveal on scroll ───────────────────────────────── */
+  function checkReveal(){
+    $('.reveal').each(function(){
+      if(!$(this).hasClass('in')){
+        const top = $(this).offset().top;
+        if($(window).scrollTop() + $(window).height() > top - 80){
+          $(this).addClass('in');
+        }
+      }
+    });
+  }
+  // Initial check
+  checkReveal();
+  $(window).on('scroll.reveal', checkReveal);
+
+  /* ── Skill bar fill ─────────────────────────────────── */
+  let skillsFired = false;
+  function checkSkills(){
+    if(skillsFired) return;
+    if($('.wv-main').length){
+      const top = $('.wv-main').offset().top;
+      if($(window).scrollTop() + $(window).height() > top - 60){
+        skillsFired = true;
+        $('.skill-fill').each(function(){
+          const w = $(this).data('w') + '%';
+          $(this).css('width', w);
+        });
+      }
+    }
+  }
+  $(window).on('scroll.skills', checkSkills);
+
+  /* ── FAQ accordion ──────────────────────────────────── */
+  $('.faq-q').on('click', function(){
+    const $item = $(this).closest('.faq-item');
+    const $ans  = $item.find('.faq-a');
+    const isOpen = $item.hasClass('open');
+
+    // Close all
+    $('.faq-item').removeClass('open');
+    $('.faq-a').css('max-height','0');
+
+    if(!isOpen){
+      $item.addClass('open');
+      $ans.css('max-height', $ans[0].scrollHeight + 'px');
+    }
+  });
+
+  /* ── Contact form ───────────────────────────────────── */
+  $('#sendBtn').on('click', function(){
+    const $btn = $(this);
+    $btn.html('<i class="bi bi-hourglass-split"></i> Sending…').css('opacity',.75).prop('disabled',true);
+    setTimeout(function(){
+      $btn.html('<i class="bi bi-check-circle-fill"></i> Message Sent! I\'ll reply within 24h.')
+          .css({'opacity':1,'background':'#1B3D8B'});
+    }, 1800);
+  });
+
+  /* ════════════════════════════════════════════════════
+     WELCOME OVERLAY
+     ════════════════════════════════════════════════════ */
+  (function(){
+
+    // Show every first visit per session (use localStorage for repeat visits)
+    const seen = localStorage.getItem('fdev_visited');
+
+    if(seen){
+      // Returning visitor — remove instantly, no fanfare
+      $('#welcomeOverlay').remove();
+      return;
+    }
+
+    /* — Floating code particles — */
+    const snippets = [
+      'php artisan make:controller',
+      'SELECT * FROM transactions',
+      'docker-compose up -d',
+      '$query->where("status","active")',
+      'git push origin main',
+      'npm run build',
+      'Route::apiResource("/api/v1")',
+      'class AuthController extends Controller',
+      'aws s3 sync ./dist s3://bucket',
+      'return response()->json($data)',
+      'Schema::create("users")',
+      'nginx -t && nginx -s reload',
+    ];
+    const $cp = $('#wovCodeParticles');
+    snippets.forEach(function(s, i){
+      $cp.append($('<span class="wov-code">').text(s).css({
+        left: (5 + Math.random() * 85) + '%',
+        animationDuration: (18 + Math.random() * 16) + 's',
+        animationDelay:    (Math.random() * 14) + 's',
+        opacity: 0
+      }));
+    });
+
+    /* — Typewriter effect — */
+    const greetings = [
+      { pre:'Hey there! ',   hi:'Welcome 👋',         color:false },
+      { pre:'I\'m Francis — ', hi:'Full Stack Dev.', color:true  },
+    ];
+    let gIdx = 0, cIdx = 0, typing = true, pausing = false;
+
+    function type(){
+      const g   = greetings[gIdx];
+      const txt = g.pre + g.hi;
+      const $el = $('#wovTyped');
+
+      if(typing){
+        if(cIdx < txt.length){
+          cIdx++;
+          const current = txt.slice(0, cIdx);
+          if(g.color && cIdx > g.pre.length){
+            $el.html(
+              $('<span>').text(g.pre)[0].outerHTML +
+              '<span class="grad-txt">' + $('<span>').text(current.slice(g.pre.length)).text() + '</span>'
+            );
+          } else {
+            $el.text(current);
+          }
+          setTimeout(type, cIdx < g.pre.length ? 55 : 70);
+        } else {
+          // Done typing — pause then erase after first greeting, else stop
+          if(gIdx === 0){
+            setTimeout(function(){ typing = false; erase(); }, 1400);
+          }
+          // second greeting stays
+        }
+      }
+    }
+
+    function erase(){
+      const $el = $('#wovTyped');
+      const txt = $el.text();
+      if(txt.length > 0){
+        $el.text(txt.slice(0, -1));
+        setTimeout(erase, 28);
+      } else {
+        gIdx = 1; cIdx = 0; typing = true;
+        setTimeout(type, 300);
+      }
+    }
+
+    // Start typing after avatar animates in
+    setTimeout(type, 600);
+
+    /* — Auto-progress bar — */
+    const DURATION = 5200; // ms until auto-dismiss
+    const $fill = $('#wovFill');
+    const $pct  = $('#wovPct');
+    let elapsed = 0;
+    const TICK  = 60;
+    let timer   = setInterval(function(){
+      elapsed += TICK;
+      const pct = Math.min(100, Math.round((elapsed / DURATION) * 100));
+      $fill.css({ width: pct + '%', transition: 'width ' + TICK + 'ms linear' });
+      $pct.text(pct + '%');
+      if(elapsed >= DURATION){
+        clearInterval(timer);
+        dismissOverlay();
+      }
+    }, TICK);
+
+    /* — Dismiss function — */
+    function dismissOverlay(){
+      localStorage.setItem('fdev_visited', '1');
+      $('#welcomeOverlay').addClass('hiding');
+      setTimeout(function(){
+        $('#welcomeOverlay').remove();
+        // Trigger reveal check after overlay gone
+        $(window).trigger('scroll.reveal');
+      }, 820);
+    }
+
+    /* — Button handlers — */
+    $('#wovEnter, #wovSkip').on('click', function(){
+      clearInterval(timer);
+      dismissOverlay();
+    });
+
+  })();
+
+});
 </script>
 
-<script src="js/index.js"></script>
-
 </body>
-
 </html>
