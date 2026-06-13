@@ -1276,7 +1276,8 @@ section { position:relative; z-index:1; }
 .proj-ov-btn {
   background:rgba(11,17,32,.9);
   border:1px solid var(--border2);
-  color:var(--text);border-radius:16px;
+  color:white;
+border-radius:16px;
   padding:6px 12px;font-size:.72rem;font-weight:600;
   display:flex;align-items:center;gap:6px;cursor:pointer;
 }
