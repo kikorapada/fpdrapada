@@ -22,7 +22,7 @@ Modern developer portfolio showcasing full stack projects, experience, and techn
 
 ## Live Demo
 
-https://yourusername.github.io/dev-portfolio/
+https://kikorapada.github.io/fpdrapada/
 
 ## Author
 
