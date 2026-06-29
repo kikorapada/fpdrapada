@@ -123,10 +123,10 @@ $(function(){
       const top = $('.hero-metrics').offset().top;
       if($(window).scrollTop() + $(window).height() > top - 100){
         counted = true;
-        countUp('cntProj',    30, 1200);
-        countUp('cntClients', 15,  900);
-        countUp('cntYears',    5,  600);
-        countUp('cntSat',     99, 1400);
+        countUp('cntProj',    15, 1200);
+        countUp('cntClients', 4,  900);
+        countUp('cntYears',    8,  600);
+        countUp('cntSat',     95, 1400);
       }
     }
   }
